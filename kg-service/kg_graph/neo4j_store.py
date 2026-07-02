@@ -200,8 +200,6 @@ class Neo4jGraphStore:
             "CREATE INDEX relationfact_project_id IF NOT EXISTS FOR (n:RelationFact) ON (n.project_id)",
             "CREATE INDEX evidencechunk_trace_id IF NOT EXISTS FOR (n:EvidenceChunk) ON (n.trace_id)",
             "CREATE INDEX evidencechunk_project_id IF NOT EXISTS FOR (n:EvidenceChunk) ON (n.project_id)",
-            "CREATE INDEX graph_relation_trace_id IF NOT EXISTS FOR ()-[r]-() ON (r.trace_id)",
-            "CREATE INDEX graph_relation_project_id IF NOT EXISTS FOR ()-[r]-() ON (r.project_id)",
         )
         for query in indexes:
             session.run(query)
