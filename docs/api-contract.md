@@ -5,7 +5,12 @@
 第一版使用 REST JSON。
 
 ```text
-后端 Agent 组 -> insight_payload -> Insight-front-kg KG 服务 -> graph_payload
+后端 Agent 组
+-> insight_payload
+-> Insight-front-kg KG 服务生成 graph_payload
+-> schema 校验
+-> 写入 Neo4j 主存储
+-> 从 Neo4j 查询 visualization_payload 给前端展示
 ```
 
 KG 服务默认地址：
@@ -20,7 +25,9 @@ http://localhost:8008
 
 返回服务状态。
 
-### POST /api/graph/build
+### POST /api/graph/ingest
+
+推荐主入口。
 
 输入：
 
@@ -34,41 +41,79 @@ http://localhost:8008
 
 ```json
 {
-  "graph_nodes": [],
-  "relation_candidates": [],
-  "graph_edges": [],
-  "company_edges": [],
-  "profile_edges": [],
-  "evidence_chunks": [],
-  "persistence_meta": {}
+  "graph_payload": {},
+  "visualization_payload": {},
+  "persistence_meta": {
+    "status": "persisted",
+    "node_count": 43,
+    "relation_count": 20,
+    "trace_id": "kg_20260702_xxxx",
+    "created_at": "2026-07-02T20:30:00+08:00"
+  }
 }
 ```
 
-该接口只生成图谱，不写 Neo4j。
+失败时：
+
+```json
+{
+  "graph_payload": {},
+  "visualization_payload": {},
+  "persistence_meta": {
+    "status": "failed",
+    "reason": "missing_neo4j_uri",
+    "error_type": "ConfigurationError",
+    "trace_id": "kg_20260702_xxxx",
+    "created_at": "2026-07-02T20:30:00+08:00"
+  }
+}
+```
+
+### GET /api/graph/visualization
+
+从 Neo4j 查询前端图谱展示数据。
+
+查询参数：
+
+```text
+trace_id=kg_20260702_xxxx
+project_id=new_energy
+```
+
+至少提供一个查询参数。
+
+### POST /api/graph/build
+
+兼容/debug 接口。
+
+输入 `insight_payload`，生成 `graph_payload` 并附带 `validation_meta`，不写 Neo4j。第一周可用于排查抽取规则，但不是最终产品主链路。
 
 ### POST /api/graph/persist
 
-输入：
+兼容接口。
 
-```json
-{
-  "graph_payload": {}
-}
-```
-
-输出：带 `persistence_meta` 的 `graph_payload`。
+输入 `graph_payload`，执行 schema 校验并写入 Neo4j。默认 Neo4j 必须可用。
 
 ### POST /api/graph/build-and-persist
 
-输入：
+兼容接口。
 
-```json
-{
-  "insight_payload": {}
-}
+输入 `insight_payload`，生成 `graph_payload` 并写入 Neo4j。新代码建议前端使用 `/api/graph/ingest`。
+
+## persistence_meta 语义
+
+- `persisted`：schema 校验通过，Neo4j 事务写入成功。
+- `failed`：schema 校验失败、Neo4j 未配置、连接失败或事务失败。
+- `skipped`：只允许在显式配置 `KG_ALLOW_GRAPH_PAYLOAD_FALLBACK=true` 后出现，用于本地 debug。
+
+`failed` 必须包含：
+
+```text
+reason
+error_type
+trace_id
+created_at
 ```
-
-输出：生成后的 `graph_payload`，并尝试写入 Neo4j。
 
 ## insight_payload 必需字段
 
@@ -133,7 +178,9 @@ source_index[].source_grade
 
 ## 前端展示条件
 
+- 默认调用 `/api/graph/ingest`。
+- 图谱展示优先使用 `visualization_payload`，该数据来自 Neo4j 查询。
 - `company_edges` 非空：显示公司关系图。
-- `company_edges` 为空：显示空状态。
+- `company_edges` 为空：显示空状态和 `persistence_meta`。
 - `profile_edges` 非空：点击公司节点后展示业务线、产品线、核心技术关系。
-- `persistence_meta.status` 展示 Neo4j 入库状态。
+- `persistence_meta.status` 展示 Neo4j 主存储状态。

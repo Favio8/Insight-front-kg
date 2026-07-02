@@ -138,6 +138,16 @@ export interface IndustryGraphNode {
   source_refs: string[];
   raw_mentions: string[];
   normalization_method?: string;
+  entity_id?: string;
+  entity_type?: string;
+  source?: string;
+  evidence?: string;
+  confidence?: number;
+  project_id?: string;
+  document_id?: string;
+  version?: string;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export interface IndustryEvidenceChunk {
@@ -146,6 +156,16 @@ export interface IndustryEvidenceChunk {
   source_url: string;
   source_title: string;
   source_grade: string;
+  entity_id?: string;
+  entity_type?: string;
+  source?: string;
+  evidence?: string;
+  confidence?: number;
+  project_id?: string;
+  document_id?: string;
+  version?: string;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export interface IndustryRelationCandidate {
@@ -172,6 +192,16 @@ export interface IndustryRelationCandidate {
   status: string;
   direction_uncertain: boolean;
   score_breakdown: Record<string, unknown>;
+  entity_id?: string;
+  entity_type?: string;
+  relation_type?: string;
+  source?: string;
+  evidence?: string;
+  project_id?: string;
+  document_id?: string;
+  version?: string;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export interface IndustryGraphPayload {
@@ -188,6 +218,13 @@ export interface IndustryGraphPayload {
   confidence_meta: Record<string, unknown>;
   qa_index_hints: Record<string, unknown>;
   persistence_meta?: Record<string, unknown>;
+  visualization_meta?: Record<string, unknown>;
+}
+
+export interface GraphIngestResponse {
+  graph_payload: IndustryGraphPayload;
+  visualization_payload?: IndustryGraphPayload;
+  persistence_meta: Record<string, unknown>;
 }
 
 export interface IndustryInsightPayload {

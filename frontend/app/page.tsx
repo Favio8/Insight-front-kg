@@ -2,12 +2,12 @@
 
 import { useMemo, useState } from 'react';
 import IndustryGraphView from '@/components/IndustryGraphView';
-import { buildAndPersistGraphPayload, buildGraphPayload } from '@/lib/api';
+import { buildGraphPayload, ingestGraphPayload } from '@/lib/api';
 import type { IndustryGraphPayload, IndustryInsightPayload } from '@/types/data';
 
 const SAMPLE_PATH = '/samples/new-energy-insight-payload.json';
 
-type Mode = 'build' | 'build-and-persist';
+type Mode = 'debug-build' | 'ingest';
 
 const emptyText = `{
   "task_profile": {
@@ -32,7 +32,7 @@ export default function Home() {
   const [jsonText, setJsonText] = useState(emptyText);
   const [insightPayload, setInsightPayload] = useState<IndustryInsightPayload | null>(null);
   const [graphPayload, setGraphPayload] = useState<IndustryGraphPayload | null>(null);
-  const [message, setMessage] = useState('加载 mock 数据后即可生成图谱。');
+  const [message, setMessage] = useState('加载 mock 数据后，可生成并写入 Neo4j 主存储。');
   const [loading, setLoading] = useState(false);
 
   const statusCounts = useMemo(() => countByStatus(graphPayload), [graphPayload]);
@@ -79,13 +79,28 @@ export default function Home() {
 
     setLoading(true);
     try {
-      const result =
-        mode === 'build-and-persist'
-          ? await buildAndPersistGraphPayload(payload)
-          : await buildGraphPayload(payload);
+      if (mode === 'ingest') {
+        const result = await ingestGraphPayload(payload);
+        const displayPayload =
+          result.visualization_payload?.graph_nodes?.length ? result.visualization_payload : result.graph_payload;
+        displayPayload.persistence_meta = result.persistence_meta;
+        setGraphPayload(displayPayload);
+        setInsightPayload({ ...payload, graph_payload: result.graph_payload });
+        const status = String(result.persistence_meta?.status || 'unknown');
+        const traceId = String(result.persistence_meta?.trace_id || '');
+        const reason = String(result.persistence_meta?.reason || '');
+        setMessage(
+          status === 'persisted'
+            ? `已写入 Neo4j，并从主存储返回图谱。trace_id=${traceId}`
+            : `Neo4j 入库未成功：${status}${reason ? ` / ${reason}` : ''}${traceId ? ` / trace_id=${traceId}` : ''}`,
+        );
+        return;
+      }
+
+      const result = await buildGraphPayload(payload);
       setGraphPayload(result);
       setInsightPayload({ ...payload, graph_payload: result });
-      setMessage(mode === 'build-and-persist' ? '图谱已生成，并已尝试 Neo4j 入库。' : '图谱已生成。');
+      setMessage('debug 预览：仅生成 graph_payload，未写入 Neo4j。');
     } catch (error) {
       setMessage(error instanceof Error ? error.message : '调用 KG 服务失败。');
     } finally {
@@ -101,7 +116,7 @@ export default function Home() {
             <p className="text-sm text-cyan-200">Insight-front-kg</p>
             <h1 className="mt-1 text-2xl font-semibold">产业知识图谱工作台</h1>
             <p className="mt-2 max-w-3xl text-sm text-slate-400">
-              用 mock 或后端 Agent 组输出的 insight_payload 生成 graph_payload，并验证图谱展示、证据追溯和 Neo4j 入库状态。
+              用 mock 或后端 Agent 组输出的 insight_payload 生成 graph_payload，校验后写入 Neo4j，并优先从主存储返回图谱展示。
             </p>
           </div>
           <div className="grid grid-cols-2 gap-2 text-xs text-slate-300 md:grid-cols-4">
@@ -136,19 +151,19 @@ export default function Home() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => generateGraph('build')}
+                  onClick={() => generateGraph('debug-build')}
                   disabled={loading}
                   className="rounded bg-amber-500 px-3 py-2 text-sm font-medium text-zinc-950 hover:bg-amber-400 disabled:opacity-60"
                 >
-                  生成图谱
+                  debug 生成
                 </button>
                 <button
                   type="button"
-                  onClick={() => generateGraph('build-and-persist')}
+                  onClick={() => generateGraph('ingest')}
                   disabled={loading}
                   className="rounded bg-emerald-500 px-3 py-2 text-sm font-medium text-zinc-950 hover:bg-emerald-400 disabled:opacity-60"
                 >
-                  生成并入库
+                  生成并写入 Neo4j
                 </button>
               </div>
               <div className="mt-3 rounded border border-white/10 bg-black/25 px-3 py-2 text-sm text-slate-300">

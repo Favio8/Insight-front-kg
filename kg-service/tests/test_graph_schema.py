@@ -68,6 +68,63 @@ class GraphSchemaTests(unittest.TestCase):
         self.assertEqual(serialized["relation_candidates"][0]["status"], "verified")
         json.dumps(serialized, ensure_ascii=False)
 
+    def test_validate_graph_payload_accepts_builder_output(self):
+        from kg_graph.builder import build_graph_payload
+        from kg_graph.validation import validate_graph_payload
+        from tests.test_graph_extractor import sample_insight_payload
+
+        validate_graph_payload(build_graph_payload(sample_insight_payload()))
+
+    def test_validate_graph_payload_rejects_unresolved_graph_edge_endpoint(self):
+        from kg_graph.validation import GraphPayloadValidationError, validate_graph_payload
+
+        payload = {
+            "graph_nodes": [{"node_id": "company:a", "node_type": "Company", "name": "A"}],
+            "relation_candidates": [],
+            "graph_edges": [
+                {
+                    "rel_id": "rel:1",
+                    "head": "company:a",
+                    "tail": "company:missing",
+                    "relation": "supply",
+                    "status": "verified",
+                    "evidence_refs": [],
+                }
+            ],
+            "evidence_chunks": [],
+        }
+
+        with self.assertRaises(GraphPayloadValidationError) as context:
+            validate_graph_payload(payload)
+
+        self.assertEqual(context.exception.reason, "schema_validation_failed")
+        self.assertTrue(any("tail references missing node" in detail for detail in context.exception.details))
+
+    def test_validate_graph_payload_rejects_weak_graph_edge_status(self):
+        from kg_graph.validation import GraphPayloadValidationError, validate_graph_payload
+
+        payload = {
+            "graph_nodes": [
+                {"node_id": "company:a", "node_type": "Company", "name": "A"},
+                {"node_id": "company:b", "node_type": "Company", "name": "B"},
+            ],
+            "relation_candidates": [],
+            "graph_edges": [
+                {
+                    "rel_id": "rel:1",
+                    "head": "company:a",
+                    "tail": "company:b",
+                    "relation": "supply",
+                    "status": "weak_candidate",
+                    "evidence_refs": [],
+                }
+            ],
+            "evidence_chunks": [],
+        }
+
+        with self.assertRaises(GraphPayloadValidationError):
+            validate_graph_payload(payload)
+
 
 if __name__ == "__main__":
     unittest.main()

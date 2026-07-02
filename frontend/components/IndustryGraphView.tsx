@@ -94,6 +94,10 @@ const IndustryGraphView: React.FC<IndustryGraphViewProps> = ({ graphPayload }) =
   const { elements } = buildElements(graphPayload, expandedCompanyId);
   const companyEdges = graphPayload?.company_edges || [];
   const profileEdges = graphPayload?.profile_edges || [];
+  const persistenceMeta = graphPayload?.persistence_meta || {};
+  const persistenceStatus = String(persistenceMeta.status || '');
+  const persistenceReason = String(persistenceMeta.reason || '');
+  const persistenceTraceId = String(persistenceMeta.trace_id || '');
 
   useEffect(() => {
     if (!cyInstance) {
@@ -133,6 +137,13 @@ const IndustryGraphView: React.FC<IndustryGraphViewProps> = ({ graphPayload }) =
       <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-5 text-white">
         <h4 className="text-base font-semibold">产业关系图谱</h4>
         <p className="mt-2 text-sm text-white/60">暂无可视化公司关系。</p>
+        {persistenceStatus && (
+          <div className="mt-3 space-y-1 rounded border border-white/10 bg-black/25 p-3 text-xs text-white/70">
+            <div>入库状态：{persistenceStatus}</div>
+            {persistenceReason && <div>原因：{persistenceReason}</div>}
+            {persistenceTraceId && <div>trace_id：{persistenceTraceId}</div>}
+          </div>
+        )}
       </div>
     );
   }
