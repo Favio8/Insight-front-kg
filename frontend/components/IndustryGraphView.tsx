@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import CytoscapeComponent from 'react-cytoscapejs';
-import type { Core, ElementDefinition, EventObject } from 'cytoscape';
+import type { Core, ElementDefinition, EventObject, NodeSingular } from 'cytoscape';
 import {
   IndustryGraphNode,
   IndustryGraphPayload,
@@ -27,6 +27,20 @@ const confidenceText = (value: number | undefined) =>
 const sourceLabel = (relation: IndustryRelationCandidate) =>
   [relation.source_grade, relation.source_title || relation.source_url].filter(Boolean).join(' | ') || '无来源';
 
+const companyGraphSignature = (relations: IndustryRelationCandidate[]) =>
+  relations
+    .map((relation) => `${relation.head}|${relation.relation}|${relation.tail}`)
+    .sort()
+    .join(';');
+
+const SEGMENT_ORDER = ['上游', '中游', '下游'];
+const PROFILE_TYPE_ORDER = ['BusinessLine', 'Product', 'Technology'];
+const SEGMENT_X: Record<string, number> = {
+  上游: 170,
+  中游: 480,
+  下游: 790,
+};
+
 const buildNodeIndex = (graphPayload?: IndustryGraphPayload) => {
   const nodesById: Record<string, IndustryGraphNode> = {};
   for (const node of graphPayload?.graph_nodes || []) {
@@ -35,20 +49,171 @@ const buildNodeIndex = (graphPayload?: IndustryGraphPayload) => {
   return nodesById;
 };
 
+const segmentNameFromId = (id: string, nodesById: Record<string, IndustryGraphNode>) =>
+  nodesById[id]?.name || id.split(':').slice(1).join(':') || '未分组';
+
+const buildCompanySegments = (
+  graphPayload: IndustryGraphPayload | undefined,
+  nodesById: Record<string, IndustryGraphNode>,
+) => {
+  const companySegments: Record<string, string> = {};
+  for (const relation of graphPayload?.relation_candidates || []) {
+    if (relation.relation === 'company_in_segment' && relation.head_type === 'Company') {
+      companySegments[relation.head] = segmentNameFromId(relation.tail, nodesById);
+    }
+  }
+  return companySegments;
+};
+
+const captureCompanyPositions = (cy: Core) => {
+  const companyPositions: Record<string, { x: number; y: number }> = {};
+  cy.nodes('.company').forEach((node: NodeSingular) => {
+    const position = node.position();
+    companyPositions[node.id()] = { x: position.x, y: position.y };
+  });
+  return companyPositions;
+};
+
+const profileGroup = (relation: IndustryRelationCandidate) => {
+  if (relation.field_name === 'business_lines' || relation.tail_type === 'BusinessLine') {
+    return 'BusinessLine';
+  }
+  if (relation.field_name === 'product_lines' || relation.tail_type === 'Product') {
+    return 'Product';
+  }
+  if (relation.field_name === 'core_technologies' || relation.tail_type === 'Technology') {
+    return 'Technology';
+  }
+  return relation.tail_type || 'Profile';
+};
+
+const profileOffset = (group: string, index: number, count: number) => {
+  const spread = 78;
+  const centered = (index - (count - 1) / 2) * spread;
+  if (group === 'BusinessLine') {
+    return { x: -190, y: centered };
+  }
+  if (group === 'Product') {
+    return { x: 190, y: centered };
+  }
+  if (group === 'Technology') {
+    return { x: centered, y: 175 };
+  }
+  return { x: centered, y: -165 };
+};
+
+const buildPositions = (
+  graphPayload: IndustryGraphPayload | undefined,
+  nodesById: Record<string, IndustryGraphNode>,
+  visibleRelations: IndustryRelationCandidate[],
+  expandedCompanyIds: string[],
+  lockedCompanyPositions: Record<string, { x: number; y: number }>,
+) => {
+  const companySegments = buildCompanySegments(graphPayload, nodesById);
+  const visibleCompanyIds = Array.from(
+    new Set(
+      visibleRelations
+        .flatMap((relation) => [
+          relation.head_type === 'Company' ? relation.head : '',
+          relation.tail_type === 'Company' ? relation.tail : '',
+        ])
+        .filter(Boolean),
+    ),
+  );
+  const companiesBySegment: Record<string, string[]> = {};
+  for (const id of visibleCompanyIds) {
+    const segment = companySegments[id] || '未分组';
+    companiesBySegment[segment] = [...(companiesBySegment[segment] || []), id];
+  }
+
+  const orderedSegments = [
+    ...SEGMENT_ORDER.filter((segment) => companiesBySegment[segment]?.length),
+    ...Object.keys(companiesBySegment)
+      .filter((segment) => !SEGMENT_ORDER.includes(segment))
+      .sort(),
+  ];
+  const fallbackX = 170 + SEGMENT_ORDER.length * 250;
+  const positions: Record<string, { x: number; y: number }> = {};
+
+  orderedSegments.forEach((segment, segmentIndex) => {
+    const companyIds = companiesBySegment[segment] || [];
+    const x = SEGMENT_X[segment] || fallbackX + segmentIndex * 230;
+    const startY = 150 - ((companyIds.length - 1) * 96) / 2;
+    companyIds.forEach((id, index) => {
+      positions[id] = { x, y: startY + index * 120 };
+    });
+  });
+
+  for (const id of visibleCompanyIds) {
+    if (lockedCompanyPositions[id]) {
+      positions[id] = lockedCompanyPositions[id];
+    }
+  }
+
+  for (const expandedCompanyId of expandedCompanyIds) {
+    if (!positions[expandedCompanyId]) {
+      continue;
+    }
+    const anchor = positions[expandedCompanyId];
+    const expandedRelations = visibleRelations.filter(
+      (relation) =>
+        relation.edge_kind === 'profile' &&
+        (relation.head === expandedCompanyId || relation.tail === expandedCompanyId),
+    );
+    const targetsByGroup = new Map<string, string[]>();
+    for (const relation of expandedRelations) {
+      const target = relation.head === expandedCompanyId ? relation.tail : relation.head;
+      const group = profileGroup(relation);
+      if (!targetsByGroup.has(group)) {
+        targetsByGroup.set(group, []);
+      }
+      const targets = targetsByGroup.get(group);
+      if (targets && !targets.includes(target)) {
+        targets.push(target);
+      }
+    }
+
+    for (const group of PROFILE_TYPE_ORDER) {
+      const targets = targetsByGroup.get(group) || [];
+      targets.forEach((id, index) => {
+        const offset = profileOffset(group, index, targets.length);
+        positions[id] = { x: anchor.x + offset.x, y: anchor.y + offset.y };
+      });
+    }
+    for (const [group, targets] of Array.from(targetsByGroup.entries())) {
+      if (PROFILE_TYPE_ORDER.includes(group)) {
+        continue;
+      }
+      targets.forEach((id, index) => {
+        const offset = profileOffset(group, index, targets.length);
+        positions[id] = { x: anchor.x + offset.x, y: anchor.y + offset.y };
+      });
+    }
+  }
+
+  return positions;
+};
+
 const buildElements = (
   graphPayload: IndustryGraphPayload | undefined,
-  expandedCompanyId: string | null,
+  expandedCompanyIds: string[],
+  lockedCompanyPositions: Record<string, { x: number; y: number }>,
 ) => {
   const nodesById = buildNodeIndex(graphPayload);
   const companyEdges = graphPayload?.company_edges || [];
-  const profileEdges = expandedCompanyId
+  const expandedCompanySet = new Set(expandedCompanyIds);
+  const profileEdges = expandedCompanySet.size > 0
     ? (graphPayload?.profile_edges || []).filter(
-        (relation) => relation.head === expandedCompanyId || relation.tail === expandedCompanyId,
+        (relation) => expandedCompanySet.has(relation.head) || expandedCompanySet.has(relation.tail),
       )
     : [];
   const visibleRelations = [...companyEdges, ...profileEdges];
   const elements: ElementDefinition[] = [];
   const addedNodes = new Set<string>();
+  const hasLockedCompanyPositions = Object.keys(lockedCompanyPositions).length > 0;
+  const positions = expandedCompanySet.size > 0 || hasLockedCompanyPositions
+    ? buildPositions(graphPayload, nodesById, visibleRelations, expandedCompanyIds, lockedCompanyPositions)
+    : {};
 
   const addNode = (id: string) => {
     if (!id || addedNodes.has(id)) {
@@ -62,7 +227,14 @@ const buildElements = (
         label: nodeLabel(id, nodesById),
         nodeType: type,
       },
-      classes: type.toLowerCase(),
+      position: positions[id],
+      classes: [
+        type.toLowerCase(),
+        expandedCompanySet.has(id) ? 'expanded-company' : '',
+        type === 'Company' ? 'company-node' : 'profile-node',
+      ]
+        .filter(Boolean)
+        .join(' '),
     });
   };
 
@@ -86,14 +258,66 @@ const buildElements = (
 };
 
 const IndustryGraphView: React.FC<IndustryGraphViewProps> = ({ graphPayload }) => {
-  const [expandedCompanyId, setExpandedCompanyId] = useState<string | null>(null);
+  const [expandedCompanyIds, setExpandedCompanyIds] = useState<string[]>([]);
+  const [lockedCompanyPositions, setLockedCompanyPositions] = useState<Record<string, { x: number; y: number }>>({});
+  const [lockedViewport, setLockedViewport] = useState<{ zoom: number; pan: { x: number; y: number } } | null>(null);
   const [selectedItem, setSelectedItem] = useState<SelectedItem | null>(null);
   const [cyInstance, setCyInstance] = useState<Core | null>(null);
+  const companyGraphSignatureRef = useRef('');
 
   const nodesById = buildNodeIndex(graphPayload);
-  const { elements } = buildElements(graphPayload, expandedCompanyId);
+  const { elements } = buildElements(graphPayload, expandedCompanyIds, lockedCompanyPositions);
   const companyEdges = graphPayload?.company_edges || [];
   const profileEdges = graphPayload?.profile_edges || [];
+  const hasLockedCompanyPositions = Object.keys(lockedCompanyPositions).length > 0;
+  const graphSignature = companyGraphSignature(companyEdges);
+
+  useEffect(() => {
+    if (graphSignature === companyGraphSignatureRef.current) {
+      return;
+    }
+    companyGraphSignatureRef.current = graphSignature;
+    setExpandedCompanyIds([]);
+    setSelectedItem(null);
+    setLockedCompanyPositions({});
+    setLockedViewport(null);
+  }, [graphSignature]);
+
+  useEffect(() => {
+    if (!cyInstance || hasLockedCompanyPositions || companyEdges.length === 0) {
+      return;
+    }
+
+    const lockPositions = () => {
+      const companyPositions = captureCompanyPositions(cyInstance);
+      if (Object.keys(companyPositions).length > 0) {
+        setLockedCompanyPositions(companyPositions);
+        setLockedViewport({ zoom: cyInstance.zoom(), pan: cyInstance.pan() });
+      }
+    };
+
+    cyInstance.one('layoutstop', lockPositions);
+    const timer = window.setTimeout(lockPositions, 80);
+    return () => {
+      window.clearTimeout(timer);
+      cyInstance.removeListener('layoutstop', lockPositions);
+    };
+  }, [cyInstance, hasLockedCompanyPositions, companyEdges.length]);
+
+  useEffect(() => {
+    if (!cyInstance || !lockedViewport || !hasLockedCompanyPositions) {
+      return;
+    }
+
+    const restoreViewport = () => {
+      cyInstance.zoom(lockedViewport.zoom);
+      cyInstance.pan(lockedViewport.pan);
+    };
+
+    restoreViewport();
+    const timer = window.setTimeout(restoreViewport, 0);
+    return () => window.clearTimeout(timer);
+  }, [cyInstance, elements, hasLockedCompanyPositions, lockedViewport]);
 
   useEffect(() => {
     if (!cyInstance) {
@@ -101,14 +325,20 @@ const IndustryGraphView: React.FC<IndustryGraphViewProps> = ({ graphPayload }) =
     }
 
     const effectNodesById = buildNodeIndex(graphPayload);
-    const { visibleRelations: effectVisibleRelations } = buildElements(graphPayload, expandedCompanyId);
+    const { visibleRelations: effectVisibleRelations } = buildElements(
+      graphPayload,
+      expandedCompanyIds,
+      lockedCompanyPositions,
+    );
 
     const handleNodeTap = (event: EventObject) => {
       const id = String(event.target.id());
       const type = nodeType(id, effectNodesById);
       setSelectedItem({ kind: 'node', id, label: nodeLabel(id, effectNodesById), nodeType: type });
       if (type === 'Company') {
-        setExpandedCompanyId((current) => (current === id ? null : id));
+        setExpandedCompanyIds((current) =>
+          current.includes(id) ? current.filter((companyId) => companyId !== id) : [...current, id],
+        );
       }
     };
 
@@ -126,7 +356,7 @@ const IndustryGraphView: React.FC<IndustryGraphViewProps> = ({ graphPayload }) =
       cyInstance.removeListener('tap', 'node', handleNodeTap);
       cyInstance.removeListener('tap', 'edge', handleEdgeTap);
     };
-  }, [cyInstance, graphPayload, expandedCompanyId]);
+  }, [cyInstance, graphPayload, expandedCompanyIds, lockedCompanyPositions]);
 
   if (!graphPayload || companyEdges.length === 0) {
     return (
@@ -161,7 +391,11 @@ const IndustryGraphView: React.FC<IndustryGraphViewProps> = ({ graphPayload }) =
             elements={elements}
             style={{ width: '100%', height: '460px' }}
             cy={(cy: Core) => setCyInstance(cy)}
-            layout={{ name: 'cose', animate: false, fit: true, padding: 42 }}
+            layout={
+              expandedCompanyIds.length > 0 || hasLockedCompanyPositions
+                ? { name: 'preset', animate: false, fit: false, padding: 62 }
+                : { name: 'cose', animate: false, fit: true, padding: 42 }
+            }
             stylesheet={[
               {
                 selector: 'node',
@@ -186,6 +420,26 @@ const IndustryGraphView: React.FC<IndustryGraphViewProps> = ({ graphPayload }) =
                   width: 72,
                   height: 72,
                   'font-weight': 'bold',
+                },
+              },
+              {
+                selector: '.expanded-company',
+                style: {
+                  'background-color': '#f97316',
+                  'border-color': '#fff7ed',
+                  'border-width': 5,
+                  width: 84,
+                  height: 84,
+                },
+              },
+              {
+                selector: '.profile-node',
+                style: {
+                  width: 48,
+                  height: 48,
+                  'font-size': 10,
+                  'text-wrap': 'wrap',
+                  'text-max-width': '78px',
                 },
               },
               {
@@ -227,8 +481,9 @@ const IndustryGraphView: React.FC<IndustryGraphViewProps> = ({ graphPayload }) =
                 style: {
                   'line-color': '#22d3ee',
                   'target-arrow-color': '#22d3ee',
-                  width: 2,
-                  opacity: 0.62,
+                  width: 1.8,
+                  opacity: 0.7,
+                  'line-style': 'dashed',
                 },
               },
             ]}
