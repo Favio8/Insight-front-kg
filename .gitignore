@@ -1,0 +1,17 @@
+﻿node_modules/
+.next/
+.output/
+.wrangler/
+.tanstack/
+.nitro/
+dist/
+__pycache__/
+.pytest_cache/
+.venv/
+outputs/
+.env
+.env.*
+!.env.example
+*.pyc
+*.log
+coverage/

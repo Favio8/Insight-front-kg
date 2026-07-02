@@ -1,0 +1,369 @@
+{
+  "task_profile": {
+    "query": "新能源汽车",
+    "mode": "industry_insight",
+    "industry": "新能源汽车",
+    "profile_id": "new_energy",
+    "profile_name": "新能源汽车",
+    "source_count": 6
+  },
+  "chain_skeleton": [
+    {
+      "segment_key": "upstream",
+      "segment": "上游",
+      "description": "上游包括动力电池材料、电芯制造和关键零部件供应。",
+      "subsegments": ["动力电池", "电池材料", "电驱系统"],
+      "confidence": 0.86,
+      "evidence_sources": ["https://example.com/nev-chain"]
+    },
+    {
+      "segment_key": "midstream",
+      "segment": "中游",
+      "description": "中游主要是整车制造、三电系统集成和智能化平台。",
+      "subsegments": ["整车制造", "三电系统", "智能化平台"],
+      "confidence": 0.84,
+      "evidence_sources": ["https://example.com/nev-chain"]
+    },
+    {
+      "segment_key": "downstream",
+      "segment": "下游",
+      "description": "下游包括充电设施、运营服务和终端消费者。",
+      "subsegments": ["充电设施", "运营服务", "终端应用"],
+      "confidence": 0.8,
+      "evidence_sources": ["https://example.com/nev-chain"]
+    }
+  ],
+  "segment_companies": [
+    {
+      "segment_key": "upstream",
+      "segment": "上游",
+      "subsegments": ["动力电池", "电池材料"],
+      "companies": [
+        {
+          "company_name": "宁德时代",
+          "subsegment": "动力电池",
+          "reason": "宁德时代是动力电池龙头企业。",
+          "evidence_sources": ["https://example.com/catl-report"]
+        }
+      ]
+    },
+    {
+      "segment_key": "midstream",
+      "segment": "中游",
+      "subsegments": ["整车制造", "三电系统"],
+      "companies": [
+        {
+          "company_name": "比亚迪",
+          "subsegment": "整车制造",
+          "reason": "比亚迪覆盖电池、三电系统和整车制造。",
+          "evidence_sources": ["https://example.com/byd-report"]
+        },
+        {
+          "company_name": "特斯拉",
+          "subsegment": "整车制造",
+          "reason": "特斯拉是新能源汽车整车企业。",
+          "evidence_sources": ["https://example.com/tesla-site"]
+        }
+      ]
+    },
+    {
+      "segment_key": "downstream",
+      "segment": "下游",
+      "subsegments": ["充电设施"],
+      "companies": [
+        {
+          "company_name": "特来电",
+          "subsegment": "充电设施",
+          "reason": "特来电提供充电网络与运营服务。",
+          "evidence_sources": ["https://example.com/teld"]
+        }
+      ]
+    }
+  ],
+  "company_cards": [
+    {
+      "company_name": "宁德时代",
+      "aliases": ["CATL"],
+      "segment": "上游",
+      "subsegment": "动力电池",
+      "business_summary": "宁德时代聚焦动力电池和储能电池系统。",
+      "company_positioning": "全球动力电池龙头供应商",
+      "business_lines": ["动力电池业务", "储能电池业务"],
+      "product_lines": ["动力电池", "储能系统"],
+      "core_technologies": ["电池管理系统", "磷酸铁锂电池技术"],
+      "relationship_clues": [
+        "目标企业=比亚迪；关系层级=industry_template；关系名称=动力电池供应；方向=本企业->目标企业；证据=宁德时代为比亚迪提供动力电池相关产品。；来源=https://example.com/catl-byd；来源等级=A；解释=宁德时代向比亚迪提供动力电池相关产品",
+        "目标企业=特斯拉；关系层级=industry_template；关系名称=动力电池配套；方向=本企业->目标企业；证据=宁德时代为特斯拉提供动力电池配套。；来源=https://example.com/catl-tesla；来源等级=A；解释=宁德时代为特斯拉提供动力电池产品"
+      ],
+      "key_sources": [
+        {
+          "title": "宁德时代年度报告",
+          "url": "https://example.com/catl-report",
+          "snippet": "宁德时代主营动力电池和储能系统，核心技术包括电池管理系统。",
+          "source_grade": "A"
+        }
+      ],
+      "field_evidence": {
+        "business_lines": [
+          {
+            "value": "动力电池业务",
+            "evidence_text": "宁德时代主营动力电池业务。",
+            "source_url": "https://example.com/catl-report",
+            "source_title": "宁德时代年度报告",
+            "source_grade": "A"
+          },
+          {
+            "value": "储能电池业务",
+            "evidence_text": "宁德时代布局储能电池业务。",
+            "source_url": "https://example.com/catl-report",
+            "source_title": "宁德时代年度报告",
+            "source_grade": "A"
+          }
+        ],
+        "product_lines": [
+          {
+            "value": "动力电池",
+            "evidence_text": "宁德时代动力电池产品服务新能源汽车客户。",
+            "source_url": "https://example.com/catl-report",
+            "source_title": "宁德时代年度报告",
+            "source_grade": "A"
+          },
+          {
+            "value": "储能系统",
+            "evidence_text": "宁德时代提供储能系统产品。",
+            "source_url": "https://example.com/catl-report",
+            "source_title": "宁德时代年度报告",
+            "source_grade": "A"
+          }
+        ],
+        "core_technologies": [
+          {
+            "value": "电池管理系统",
+            "evidence_text": "宁德时代核心技术包括电池管理系统。",
+            "source_url": "https://example.com/catl-report",
+            "source_title": "宁德时代年度报告",
+            "source_grade": "A"
+          },
+          {
+            "value": "磷酸铁锂电池技术",
+            "evidence_text": "宁德时代在磷酸铁锂电池技术方面持续投入。",
+            "source_url": "https://example.com/catl-report",
+            "source_title": "宁德时代年度报告",
+            "source_grade": "A"
+          }
+        ]
+      },
+      "evidence_excerpts": ["宁德时代主营动力电池和储能系统，核心技术包括电池管理系统。"]
+    },
+    {
+      "company_name": "比亚迪",
+      "aliases": ["BYD"],
+      "segment": "中游",
+      "subsegment": "整车制造",
+      "business_summary": "比亚迪覆盖新能源汽车整车、电池和三电系统。",
+      "company_positioning": "新能源汽车整车与三电系统一体化企业",
+      "business_lines": ["新能源汽车业务", "动力电池业务"],
+      "product_lines": ["新能源汽车", "刀片电池"],
+      "core_technologies": ["三电系统", "磷酸铁锂电池技术"],
+      "relationship_clues": [
+        "目标企业=特来电；关系层级=generic；关系名称=合作；方向=本企业->目标企业；证据=比亚迪与充电服务企业围绕补能生态开展合作。；来源=https://example.com/byd-charging；来源等级=B；解释=整车企业与充电服务企业共建补能生态"
+      ],
+      "key_sources": [
+        {
+          "title": "比亚迪业务介绍",
+          "url": "https://example.com/byd-report",
+          "snippet": "比亚迪覆盖新能源汽车、动力电池和三电系统。",
+          "source_grade": "A"
+        }
+      ],
+      "field_evidence": {
+        "business_lines": [
+          {
+            "value": "新能源汽车业务",
+            "evidence_text": "比亚迪新能源汽车业务覆盖乘用车和商用车。",
+            "source_url": "https://example.com/byd-report",
+            "source_title": "比亚迪业务介绍",
+            "source_grade": "A"
+          },
+          {
+            "value": "动力电池业务",
+            "evidence_text": "比亚迪具备动力电池业务能力。",
+            "source_url": "https://example.com/byd-report",
+            "source_title": "比亚迪业务介绍",
+            "source_grade": "A"
+          }
+        ],
+        "product_lines": [
+          {
+            "value": "新能源汽车",
+            "evidence_text": "比亚迪销售新能源汽车产品。",
+            "source_url": "https://example.com/byd-report",
+            "source_title": "比亚迪业务介绍",
+            "source_grade": "A"
+          },
+          {
+            "value": "刀片电池",
+            "evidence_text": "刀片电池是比亚迪电池产品之一。",
+            "source_url": "https://example.com/byd-report",
+            "source_title": "比亚迪业务介绍",
+            "source_grade": "A"
+          }
+        ],
+        "core_technologies": [
+          {
+            "value": "三电系统",
+            "evidence_text": "比亚迪具备三电系统集成能力。",
+            "source_url": "https://example.com/byd-report",
+            "source_title": "比亚迪业务介绍",
+            "source_grade": "A"
+          }
+        ]
+      },
+      "evidence_excerpts": ["比亚迪覆盖新能源汽车、动力电池和三电系统。"]
+    },
+    {
+      "company_name": "特斯拉",
+      "aliases": ["Tesla"],
+      "segment": "中游",
+      "subsegment": "整车制造",
+      "business_summary": "特斯拉聚焦新能源汽车整车和智能化平台。",
+      "company_positioning": "全球新能源汽车整车企业",
+      "business_lines": ["新能源汽车业务", "智能化平台"],
+      "product_lines": ["电动车", "能源补能服务"],
+      "core_technologies": ["整车软件平台", "电驱控制"],
+      "relationship_clues": [],
+      "key_sources": [
+        {
+          "title": "特斯拉官网",
+          "url": "https://example.com/tesla-site",
+          "snippet": "特斯拉提供电动车和能源相关服务。",
+          "source_grade": "B"
+        }
+      ],
+      "field_evidence": {
+        "business_lines": [
+          {
+            "value": "新能源汽车业务",
+            "evidence_text": "特斯拉主营电动车业务。",
+            "source_url": "https://example.com/tesla-site",
+            "source_title": "特斯拉官网",
+            "source_grade": "B"
+          }
+        ],
+        "product_lines": [
+          {
+            "value": "电动车",
+            "evidence_text": "特斯拉提供电动车产品。",
+            "source_url": "https://example.com/tesla-site",
+            "source_title": "特斯拉官网",
+            "source_grade": "B"
+          }
+        ],
+        "core_technologies": [
+          {
+            "value": "整车软件平台",
+            "evidence_text": "特斯拉重视整车软件平台能力。",
+            "source_url": "https://example.com/tesla-site",
+            "source_title": "特斯拉官网",
+            "source_grade": "B"
+          }
+        ]
+      },
+      "evidence_excerpts": ["特斯拉提供电动车和能源相关服务。"]
+    },
+    {
+      "company_name": "特来电",
+      "aliases": [],
+      "segment": "下游",
+      "subsegment": "充电设施",
+      "business_summary": "特来电提供充电网络建设和运营服务。",
+      "company_positioning": "新能源汽车充电服务企业",
+      "business_lines": ["充电运营服务"],
+      "product_lines": ["充电桩", "充电网络"],
+      "core_technologies": ["快充技术", "充电运营平台"],
+      "relationship_clues": [],
+      "key_sources": [
+        {
+          "title": "特来电业务介绍",
+          "url": "https://example.com/teld",
+          "snippet": "特来电提供充电网络建设和运营服务。",
+          "source_grade": "B"
+        }
+      ],
+      "field_evidence": {
+        "business_lines": [
+          {
+            "value": "充电运营服务",
+            "evidence_text": "特来电提供充电运营服务。",
+            "source_url": "https://example.com/teld",
+            "source_title": "特来电业务介绍",
+            "source_grade": "B"
+          }
+        ],
+        "product_lines": [
+          {
+            "value": "充电桩",
+            "evidence_text": "特来电提供充电桩相关产品和服务。",
+            "source_url": "https://example.com/teld",
+            "source_title": "特来电业务介绍",
+            "source_grade": "B"
+          }
+        ],
+        "core_technologies": [
+          {
+            "value": "快充技术",
+            "evidence_text": "特来电布局快充技术和平台能力。",
+            "source_url": "https://example.com/teld",
+            "source_title": "特来电业务介绍",
+            "source_grade": "B"
+          }
+        ]
+      },
+      "evidence_excerpts": ["特来电提供充电网络建设和运营服务。"]
+    }
+  ],
+  "source_index": [
+    {
+      "title": "新能源汽车产业链说明",
+      "url": "https://example.com/nev-chain",
+      "snippet": "新能源汽车产业链包括动力电池、整车制造和充电设施等环节。",
+      "source_grade": "A"
+    },
+    {
+      "title": "宁德时代年度报告",
+      "url": "https://example.com/catl-report",
+      "snippet": "宁德时代主营动力电池和储能系统，核心技术包括电池管理系统。",
+      "source_grade": "A"
+    },
+    {
+      "title": "宁德时代与比亚迪配套关系",
+      "url": "https://example.com/catl-byd",
+      "snippet": "宁德时代为比亚迪提供动力电池相关产品。",
+      "source_grade": "A"
+    },
+    {
+      "title": "宁德时代与特斯拉配套关系",
+      "url": "https://example.com/catl-tesla",
+      "snippet": "宁德时代为特斯拉提供动力电池配套。",
+      "source_grade": "A"
+    },
+    {
+      "title": "比亚迪业务介绍",
+      "url": "https://example.com/byd-report",
+      "snippet": "比亚迪覆盖新能源汽车、动力电池和三电系统。",
+      "source_grade": "A"
+    },
+    {
+      "title": "特来电业务介绍",
+      "url": "https://example.com/teld",
+      "snippet": "特来电提供充电网络建设和运营服务。",
+      "source_grade": "B"
+    }
+  ],
+  "coverage_meta": {
+    "coverage_complete": true,
+    "missing_segments": [],
+    "repair_attempts": 0,
+    "company_count": 4
+  }
+}

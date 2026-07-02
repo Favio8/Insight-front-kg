@@ -1,0 +1,80 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", "PingFang SC", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--on-surface);
+  --color-surface: var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  --text-body-sm: 12px;
+  --text-title-sm: 14px;
+  --text-headline-md: 18px;
+}
+
+:root {
+  --background: #eef1f6;
+  --surface: #ffffff;
+  --surface-container: #eef1f6;
+  --surface-container-low: #f7f9fc;
+  --surface-container-high: #e6e9ef;
+  --on-surface: #191c1e;
+  --on-surface-variant: #434653;
+  --primary: #0057c2;
+  --primary-container: #d8e2ff;
+  --secondary: #002a81;
+  --secondary-fixed: #b8c5f0;
+  --outline: #747685;
+  --outline-variant: #c4c5d6;
+}
+
+@layer base {
+  * {
+    border-color: var(--outline-variant);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--on-surface);
+    font-family: "Inter", "PingFang SC", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: var(--outline-variant); border-radius: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
