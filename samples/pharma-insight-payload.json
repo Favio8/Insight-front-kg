@@ -1,0 +1,538 @@
+{
+  "task_profile": {
+    "query": "医药行业",
+    "mode": "industry_insight",
+    "industry": "医药行业",
+    "profile_id": "pharma_chain",
+    "profile_name": "医药行业产业链",
+    "source_count": 8
+  },
+  "chain_skeleton": [
+    {
+      "segment_key": "upstream",
+      "segment": "上游",
+      "description": "上游包括原料与生产投入、研发与实验投入、研发服务和生产外包服务。",
+      "subsegments": ["原料与生产投入", "研发与实验投入", "研发服务", "生产外包服务"],
+      "confidence": 0.86,
+      "evidence_sources": ["https://example.com/pharma-chain"]
+    },
+    {
+      "segment_key": "midstream",
+      "segment": "中游",
+      "description": "中游包括药品制造、化学药、生物药、中药/OTC、器械与耗材。",
+      "subsegments": ["药品制造", "化学药", "生物药", "中药/OTC", "器械与耗材"],
+      "confidence": 0.84,
+      "evidence_sources": ["https://example.com/pharma-chain"]
+    },
+    {
+      "segment_key": "downstream",
+      "segment": "下游",
+      "description": "下游包括流通与渠道、零售与院外、医疗终端。",
+      "subsegments": ["流通与渠道", "零售与院外", "医疗终端"],
+      "confidence": 0.82,
+      "evidence_sources": ["https://example.com/pharma-chain"]
+    },
+    {
+      "segment_key": "support",
+      "segment": "支撑",
+      "description": "支撑层包括公共医院、头部三甲医院、医疗机构和基层医疗。",
+      "subsegments": ["公共医院", "头部三甲医院", "医疗机构", "基层医疗"],
+      "confidence": 0.78,
+      "evidence_sources": ["https://example.com/pharma-chain"]
+    }
+  ],
+  "segment_companies": [
+    {
+      "segment_key": "upstream",
+      "segment": "上游",
+      "subsegments": ["原料与生产投入", "研发与实验投入"],
+      "companies": [
+        {
+          "company_name": "上海医药",
+          "company_positioning": "医药工业与分销双轮驱动企业",
+          "business_summary": "覆盖医药制造、分销和零售等业务。",
+          "key_sources": []
+        },
+        {
+          "company_name": "药明康德",
+          "company_positioning": "研发服务平台",
+          "business_summary": "提供 CRO/CDMO 等研发与生产服务。",
+          "key_sources": []
+        }
+      ]
+    },
+    {
+      "segment_key": "midstream",
+      "segment": "中游",
+      "subsegments": ["药品制造", "化学药", "生物药"],
+      "companies": [
+        {
+          "company_name": "恒瑞医药集团",
+          "company_positioning": "创新药与高端制剂主体",
+          "business_summary": "聚焦创新药研发、药品制造与临床推广。",
+          "key_sources": []
+        },
+        {
+          "company_name": "华润医药",
+          "company_positioning": "综合医药集团",
+          "business_summary": "覆盖医药制造、分销和零售等业务。",
+          "key_sources": []
+        }
+      ]
+    },
+    {
+      "segment_key": "downstream",
+      "segment": "下游",
+      "subsegments": ["流通与渠道", "医疗终端"],
+      "companies": [
+        {
+          "company_name": "国药控股",
+          "company_positioning": "全国性医药流通龙头",
+          "business_summary": "承担医药分销、医院配送、零售和供应链服务。",
+          "key_sources": []
+        },
+        {
+          "company_name": "九州通",
+          "company_positioning": "民营医药流通平台",
+          "business_summary": "面向批发、零售和基层医疗终端提供医药供应链服务。",
+          "key_sources": []
+        }
+      ]
+    }
+  ],
+  "company_cards": [
+    {
+      "company_name": "国药控股",
+      "aliases": ["国控"],
+      "segment": "下游",
+      "subsegment": "流通与渠道",
+      "business_summary": "全国性医药流通龙头，连接药品制造企业、医院终端和零售渠道。",
+      "company_positioning": "医药流通与供应链核心平台",
+      "business_lines": ["医药分销", "医院配送", "药品零售", "供应链服务"],
+      "product_lines": ["处方药配送", "器械耗材配送", "冷链药品服务"],
+      "core_technologies": ["供应链网络", "冷链物流", "渠道数据管理"],
+      "relationship_clues": ["与上海医药存在同业竞争与渠道协同", "与华润医药存在同业竞争", "与九州通在基层和零售渠道存在业务合作与竞争"],
+      "key_sources": [],
+      "evidence_excerpts": ["国药控股在医药分销和医院配送场景中具有全国网络优势。"]
+    },
+    {
+      "company_name": "上海医药",
+      "aliases": ["上药"],
+      "segment": "上游",
+      "subsegment": "原料与生产投入",
+      "business_summary": "覆盖医药工业、分销和零售业务。",
+      "company_positioning": "医药工业与商业协同平台",
+      "business_lines": ["医药工业", "医药分销", "医药零售"],
+      "product_lines": ["化学药", "中成药", "生物制品"],
+      "core_technologies": ["药品研发", "生产质量管理", "渠道网络"],
+      "relationship_clues": ["与国药控股在分销渠道和医院终端存在同业竞争与合作空间"],
+      "key_sources": [],
+      "evidence_excerpts": ["上海医药具备医药工业和分销一体化能力。"]
+    },
+    {
+      "company_name": "华润医药",
+      "aliases": ["华润"],
+      "segment": "中游",
+      "subsegment": "药品制造",
+      "business_summary": "综合医药集团，覆盖制造、分销和零售。",
+      "company_positioning": "综合医药集团",
+      "business_lines": ["药品制造", "医药分销", "零售药房"],
+      "product_lines": ["化学药", "中药", "OTC"],
+      "core_technologies": ["生产体系", "商业渠道", "零售运营"],
+      "relationship_clues": ["与国药控股在商业渠道存在同业竞争"],
+      "key_sources": [],
+      "evidence_excerpts": ["华润医药覆盖医药制造和商业流通环节。"]
+    },
+    {
+      "company_name": "九州通",
+      "aliases": [],
+      "segment": "下游",
+      "subsegment": "流通与渠道",
+      "business_summary": "医药流通平台，覆盖批发、零售和基层医疗场景。",
+      "company_positioning": "民营医药流通平台",
+      "business_lines": ["医药批发", "零售连锁", "基层终端配送"],
+      "product_lines": ["药品配送", "器械耗材", "院外零售"],
+      "core_technologies": ["物流网络", "渠道数字化", "库存协同"],
+      "relationship_clues": ["与国药控股在基层医疗和零售渠道存在业务合作与竞争"],
+      "key_sources": [],
+      "evidence_excerpts": ["九州通在基层和零售渠道具备覆盖能力。"]
+    }
+  ],
+  "source_index": [
+    {
+      "title": "医药产业链公开资料",
+      "url": "https://example.com/pharma-chain",
+      "snippet": "医药产业链覆盖研发、生产、流通、零售和医疗终端。",
+      "source_grade": "B"
+    }
+  ],
+  "coverage_meta": {
+    "coverage_complete": true,
+    "missing_segments": [],
+    "repair_attempts": 0,
+    "company_count": 4
+  },
+  "inter_company_relations": [
+    {
+      "rel_id": "rel:pharma:gk-sh",
+      "head": "company:国药控股",
+      "head_type": "Company",
+      "relation": "industry_competition",
+      "tail": "company:上海医药",
+      "tail_type": "Company",
+      "evidence_refs": ["evidence:pharma:001"],
+      "evidence_text": "国药控股与上海医药均覆盖医药分销和医院配送场景，存在同业竞争与渠道协同空间。",
+      "source_url": "https://example.com/pharma-chain",
+      "source_title": "医药产业链公开资料",
+      "source_grade": "B",
+      "relation_origin": "demo_structured",
+      "relation_level": "industry_template",
+      "relation_name": "同业竞争",
+      "field_name": "",
+      "field_value": "",
+      "direction": "bidirectional",
+      "explanation": "两家公司均布局医药流通渠道。",
+      "edge_kind": "company",
+      "confidence": 0.78,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {}
+    },
+    {
+      "rel_id": "rel:pharma:gk-cr",
+      "head": "company:国药控股",
+      "head_type": "Company",
+      "relation": "industry_competition",
+      "tail": "company:华润医药",
+      "tail_type": "Company",
+      "evidence_refs": ["evidence:pharma:002"],
+      "evidence_text": "国药控股与华润医药均覆盖医药商业和流通环节，在医院终端和零售渠道存在竞争。",
+      "source_url": "https://example.com/pharma-chain",
+      "source_title": "医药产业链公开资料",
+      "source_grade": "B",
+      "relation_origin": "demo_structured",
+      "relation_level": "industry_template",
+      "relation_name": "同业竞争",
+      "field_name": "",
+      "field_value": "",
+      "direction": "bidirectional",
+      "explanation": "两家公司都具备医药商业网络。",
+      "edge_kind": "company",
+      "confidence": 0.76,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {}
+    },
+    {
+      "rel_id": "rel:pharma:gk-jzt",
+      "head": "company:国药控股",
+      "head_type": "Company",
+      "relation": "business_cooperation",
+      "tail": "company:九州通",
+      "tail_type": "Company",
+      "evidence_refs": ["evidence:pharma:003"],
+      "evidence_text": "国药控股与九州通在医药流通、零售和基层医疗配送场景中存在合作与竞争关系。",
+      "source_url": "https://example.com/pharma-chain",
+      "source_title": "医药产业链公开资料",
+      "source_grade": "B",
+      "relation_origin": "demo_structured",
+      "relation_level": "industry_template",
+      "relation_name": "业务合作",
+      "field_name": "",
+      "field_value": "",
+      "direction": "bidirectional",
+      "explanation": "双方均面向渠道和终端提供供应链服务。",
+      "edge_kind": "company",
+      "confidence": 0.74,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {}
+    }
+  ],
+  "graph_payload": {
+    "task_profile": {
+      "industry": "医药行业",
+      "profile_id": "pharma_chain"
+    },
+    "graph_nodes": [
+      {
+        "node_id": "company:国药控股",
+        "node_type": "Company",
+        "name": "国药控股",
+        "aliases": ["国控"],
+        "normalized_name": "国药控股",
+        "source_refs": ["https://example.com/pharma-chain"],
+        "raw_mentions": ["国药控股"],
+        "normalization_method": "exact"
+      },
+      {
+        "node_id": "company:上海医药",
+        "node_type": "Company",
+        "name": "上海医药",
+        "aliases": ["上药"],
+        "normalized_name": "上海医药",
+        "source_refs": ["https://example.com/pharma-chain"],
+        "raw_mentions": ["上海医药"],
+        "normalization_method": "exact"
+      },
+      {
+        "node_id": "company:华润医药",
+        "node_type": "Company",
+        "name": "华润医药",
+        "aliases": [],
+        "normalized_name": "华润医药",
+        "source_refs": ["https://example.com/pharma-chain"],
+        "raw_mentions": ["华润医药"],
+        "normalization_method": "exact"
+      },
+      {
+        "node_id": "company:九州通",
+        "node_type": "Company",
+        "name": "九州通",
+        "aliases": [],
+        "normalized_name": "九州通",
+        "source_refs": ["https://example.com/pharma-chain"],
+        "raw_mentions": ["九州通"],
+        "normalization_method": "exact"
+      },
+      {
+        "node_id": "businessline:医药分销",
+        "node_type": "BusinessLine",
+        "name": "医药分销",
+        "aliases": [],
+        "normalized_name": "医药分销",
+        "source_refs": [],
+        "raw_mentions": ["医药分销"],
+        "normalization_method": "exact"
+      },
+      {
+        "node_id": "businessline:医院配送",
+        "node_type": "BusinessLine",
+        "name": "医院配送",
+        "aliases": [],
+        "normalized_name": "医院配送",
+        "source_refs": [],
+        "raw_mentions": ["医院配送"],
+        "normalization_method": "exact"
+      },
+      {
+        "node_id": "product:处方药配送",
+        "node_type": "Product",
+        "name": "处方药配送",
+        "aliases": [],
+        "normalized_name": "处方药配送",
+        "source_refs": [],
+        "raw_mentions": ["处方药配送"],
+        "normalization_method": "exact"
+      },
+      {
+        "node_id": "technology:冷链物流",
+        "node_type": "Technology",
+        "name": "冷链物流",
+        "aliases": [],
+        "normalized_name": "冷链物流",
+        "source_refs": [],
+        "raw_mentions": ["冷链物流"],
+        "normalization_method": "exact"
+      }
+    ],
+    "relation_candidates": [],
+    "graph_edges": [],
+    "company_edges": [
+      {
+        "rel_id": "rel:pharma:gk-sh",
+        "head": "company:国药控股",
+        "head_type": "Company",
+        "relation": "industry_competition",
+        "tail": "company:上海医药",
+        "tail_type": "Company",
+        "evidence_refs": ["evidence:pharma:001"],
+        "evidence_text": "国药控股与上海医药均覆盖医药分销和医院配送场景，存在同业竞争与渠道协同空间。",
+        "source_url": "https://example.com/pharma-chain",
+        "source_title": "医药产业链公开资料",
+        "source_grade": "B",
+        "relation_origin": "demo_structured",
+        "relation_level": "industry_template",
+        "relation_name": "同业竞争",
+        "field_name": "",
+        "field_value": "",
+        "direction": "bidirectional",
+        "explanation": "两家公司均布局医药流通渠道。",
+        "edge_kind": "company",
+        "confidence": 0.78,
+        "status": "strong_candidate",
+        "direction_uncertain": false,
+        "score_breakdown": {}
+      },
+      {
+        "rel_id": "rel:pharma:gk-cr",
+        "head": "company:国药控股",
+        "head_type": "Company",
+        "relation": "industry_competition",
+        "tail": "company:华润医药",
+        "tail_type": "Company",
+        "evidence_refs": ["evidence:pharma:002"],
+        "evidence_text": "国药控股与华润医药均覆盖医药商业和流通环节，在医院终端和零售渠道存在竞争。",
+        "source_url": "https://example.com/pharma-chain",
+        "source_title": "医药产业链公开资料",
+        "source_grade": "B",
+        "relation_origin": "demo_structured",
+        "relation_level": "industry_template",
+        "relation_name": "同业竞争",
+        "field_name": "",
+        "field_value": "",
+        "direction": "bidirectional",
+        "explanation": "两家公司都具备医药商业网络。",
+        "edge_kind": "company",
+        "confidence": 0.76,
+        "status": "strong_candidate",
+        "direction_uncertain": false,
+        "score_breakdown": {}
+      },
+      {
+        "rel_id": "rel:pharma:gk-jzt",
+        "head": "company:国药控股",
+        "head_type": "Company",
+        "relation": "business_cooperation",
+        "tail": "company:九州通",
+        "tail_type": "Company",
+        "evidence_refs": ["evidence:pharma:003"],
+        "evidence_text": "国药控股与九州通在医药流通、零售和基层医疗配送场景中存在合作与竞争关系。",
+        "source_url": "https://example.com/pharma-chain",
+        "source_title": "医药产业链公开资料",
+        "source_grade": "B",
+        "relation_origin": "demo_structured",
+        "relation_level": "industry_template",
+        "relation_name": "业务合作",
+        "field_name": "",
+        "field_value": "",
+        "direction": "bidirectional",
+        "explanation": "双方均面向渠道和终端提供供应链服务。",
+        "edge_kind": "company",
+        "confidence": 0.74,
+        "status": "strong_candidate",
+        "direction_uncertain": false,
+        "score_breakdown": {}
+      }
+    ],
+    "profile_edges": [
+      {
+        "rel_id": "rel:pharma:gk-bl1",
+        "head": "company:国药控股",
+        "head_type": "Company",
+        "relation": "company_has_business_line",
+        "tail": "businessline:医药分销",
+        "tail_type": "BusinessLine",
+        "evidence_refs": ["evidence:pharma:004"],
+        "evidence_text": "国药控股承担医药分销和医院配送服务。",
+        "source_url": "https://example.com/pharma-chain",
+        "source_title": "医药产业链公开资料",
+        "source_grade": "B",
+        "relation_origin": "demo_structured",
+        "relation_level": "",
+        "relation_name": "业务线",
+        "field_name": "business_lines",
+        "field_value": "医药分销",
+        "direction": "",
+        "explanation": "",
+        "edge_kind": "profile",
+        "confidence": 0.8,
+        "status": "strong_candidate",
+        "direction_uncertain": false,
+        "score_breakdown": {}
+      },
+      {
+        "rel_id": "rel:pharma:gk-bl2",
+        "head": "company:国药控股",
+        "head_type": "Company",
+        "relation": "company_has_business_line",
+        "tail": "businessline:医院配送",
+        "tail_type": "BusinessLine",
+        "evidence_refs": ["evidence:pharma:005"],
+        "evidence_text": "国药控股面向医院终端提供配送和供应链服务。",
+        "source_url": "https://example.com/pharma-chain",
+        "source_title": "医药产业链公开资料",
+        "source_grade": "B",
+        "relation_origin": "demo_structured",
+        "relation_level": "",
+        "relation_name": "业务线",
+        "field_name": "business_lines",
+        "field_value": "医院配送",
+        "direction": "",
+        "explanation": "",
+        "edge_kind": "profile",
+        "confidence": 0.8,
+        "status": "strong_candidate",
+        "direction_uncertain": false,
+        "score_breakdown": {}
+      },
+      {
+        "rel_id": "rel:pharma:gk-p1",
+        "head": "company:国药控股",
+        "head_type": "Company",
+        "relation": "company_has_product",
+        "tail": "product:处方药配送",
+        "tail_type": "Product",
+        "evidence_refs": ["evidence:pharma:006"],
+        "evidence_text": "国药控股覆盖处方药配送和渠道供应链服务。",
+        "source_url": "https://example.com/pharma-chain",
+        "source_title": "医药产业链公开资料",
+        "source_grade": "B",
+        "relation_origin": "demo_structured",
+        "relation_level": "",
+        "relation_name": "产品服务",
+        "field_name": "product_lines",
+        "field_value": "处方药配送",
+        "direction": "",
+        "explanation": "",
+        "edge_kind": "profile",
+        "confidence": 0.78,
+        "status": "strong_candidate",
+        "direction_uncertain": false,
+        "score_breakdown": {}
+      },
+      {
+        "rel_id": "rel:pharma:gk-t1",
+        "head": "company:国药控股",
+        "head_type": "Company",
+        "relation": "company_has_technology",
+        "tail": "technology:冷链物流",
+        "tail_type": "Technology",
+        "evidence_refs": ["evidence:pharma:007"],
+        "evidence_text": "医药流通企业需要冷链物流能力支撑生物药和特殊药品配送。",
+        "source_url": "https://example.com/pharma-chain",
+        "source_title": "医药产业链公开资料",
+        "source_grade": "B",
+        "relation_origin": "demo_structured",
+        "relation_level": "",
+        "relation_name": "核心能力",
+        "field_name": "core_technologies",
+        "field_value": "冷链物流",
+        "direction": "",
+        "explanation": "",
+        "edge_kind": "profile",
+        "confidence": 0.76,
+        "status": "strong_candidate",
+        "direction_uncertain": false,
+        "score_breakdown": {}
+      }
+    ],
+    "structural_edges": [],
+    "inter_company_relations": [],
+    "evidence_chunks": [
+      {
+        "chunk_id": "evidence:pharma:001",
+        "text": "国药控股与上海医药均覆盖医药分销和医院配送场景。",
+        "source_url": "https://example.com/pharma-chain",
+        "source_title": "医药产业链公开资料",
+        "source_grade": "B"
+      }
+    ],
+    "normalization_index": [],
+    "confidence_meta": {},
+    "qa_index_hints": {},
+    "persistence_meta": {
+      "status": "demo_not_persisted"
+    }
+  }
+}

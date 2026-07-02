@@ -1,37 +1,72 @@
-# Insight-front-kg
+﻿# Insight-front-kg
 
-独立运行的知识图谱和图谱前端工作台。
+产业链知识图谱工作台项目，包含前端工作台、KG 服务、样例数据和联调文档。
 
-目标链路：
+## 当前推荐运行入口
 
 ```text
-后端 Agent 组输出 insight_payload
--> KG 服务生成 graph_payload
--> 可选写入 Neo4j
--> 前端图谱结果区展示
+frontend/
 ```
+
+`frontend` 现在是基于 Lovable UI 改造后的正式前端，支持产业总览、企业库、企业画像、核心关联图谱、完整 Cytoscape 知识图谱和本地 sample 数据预演。
+
+旧 Next.js 前端已归档到：
+
+```text
+legacy-next-frontend/
+```
+
+一般开发和演示请优先使用 `frontend/`。
 
 ## 目录结构
 
 ```text
-frontend/     Next.js 图谱工作台
-kg-service/   FastAPI 图谱服务
-samples/      mock insight_payload 样例
-docs/         接口协议和联调说明
+frontend/              正式前端，Vite + React + TanStack + Cytoscape
+kg-service/            FastAPI 知识图谱服务
+samples/               根目录样例数据
+docs/                  接口协议、需求说明和文档
+docker-compose.neo4j.yml
 ```
 
-## 第一周需求
+## 启动前端
 
-第一周执行清单见：
+```bash
+cd frontend
+npm install
+npm run dev -- --host 0.0.0.0 --port 3003
+```
+
+访问：
 
 ```text
-docs/第一周需求列表.md
+http://localhost:3003/
 ```
+
+构建检查：
+
+```bash
+npm run build
+```
+
+## 前端数据
+
+前端默认读取：
+
+```text
+frontend/public/samples/pharma-insight-payload.json
+frontend/public/samples/new-energy-insight-payload.json
+frontend/public/samples/new-energy-graph-payload.json
+```
+
+其中：
+
+- `insight_payload` 驱动产业链地图、企业列表和企业画像。
+- `graph_payload` 驱动核心关联图谱和完整知识图谱。
 
 ## 启动 KG 服务
 
-```powershell
-cd D:\AAA_Favio_2026\AI_exploring\DigitalChina\Insight-front-kg\kg-service
+```bash
+cd kg-service
 pip install -r requirements.txt
 python -m uvicorn app:app --host 0.0.0.0 --port 8008 --reload
 ```
@@ -42,28 +77,13 @@ python -m uvicorn app:app --host 0.0.0.0 --port 8008 --reload
 http://localhost:8008/health
 ```
 
-## 启动前端
-
-```powershell
-cd D:\AAA_Favio_2026\AI_exploring\DigitalChina\Insight-front-kg\frontend
-npm install
-npm run dev
-```
-
-访问：
-
-```text
-http://localhost:3001
-```
-
 ## Neo4j 可选入库
 
-```powershell
-cd D:\AAA_Favio_2026\AI_exploring\DigitalChina\Insight-front-kg
+```bash
 docker compose -f docker-compose.neo4j.yml up -d
 ```
 
-环境变量：
+环境变量示例：
 
 ```text
 NEO4J_URI=bolt://localhost:7687
@@ -72,44 +92,27 @@ NEO4J_PASSWORD=your_password
 GRAPH_AUTO_PERSIST=true
 ```
 
-Neo4j Browser:
+Neo4j Browser：
 
 ```text
 http://localhost:7474
 ```
 
-## 第一周验收
+## 协作注意
 
-- mock `insight_payload` 能生成 `graph_payload`。
-- `company_edges.length > 0`。
-- `profile_edges.length > 0`。
-- 前端能显示公司关系图。
-- 点击公司节点能展开画像关系。
-- 点击关系边能看到证据和来源。
-- Neo4j 成功、跳过或失败都能通过 `persistence_meta` 记录。
+- 不提交 `node_modules`、`.output`、`.next`、`.wrangler`、`__pycache__` 等生成目录。
+- 前端改动优先进入 `frontend/src/`。
+- KG 服务改动进入 `kg-service/`。
+- 新增样例数据时，同步说明字段含义和使用入口。
+- 提交前建议运行：
 
-## 当前已验证
-
-在 `industry_insight` conda 环境中已验证：
-
-```text
-kg-service: python -m pytest -q
-结果：34 passed
-
-mock 样例生成结果：
-graph_nodes=43
-company_edges=2
-profile_edges=18
-evidence_chunks=27
-
-frontend: npm run build
-结果：Next.js production build passed
+```bash
+cd frontend
+npm run build
 ```
 
-本地服务默认地址：
-
-```text
-KG 服务：http://localhost:8008
-前端：http://localhost:3001
-Neo4j Browser：http://localhost:7474
+```bash
+cd kg-service
+python -m pytest -q
 ```
+
