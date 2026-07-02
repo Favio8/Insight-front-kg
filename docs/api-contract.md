@@ -19,6 +19,23 @@ KG 服务默认地址：
 http://localhost:8008
 ```
 
+Insight 主后端默认地址：
+
+```text
+http://localhost:8000
+```
+
+主后端当前可提供的结果来源：
+
+```text
+POST /report/
+GET  /api/reports/{research_id}
+GET  /outputs/<task>.insight.json
+WS   /ws -> type=path -> output.insight_payload
+```
+
+前端默认通过 `VITE_INSIGHT_API_BASE_URL` 配置主后端地址，通过 `VITE_KG_API_BASE_URL` 配置 KG 服务地址。
+
 ## 接口
 
 ### GET /health
@@ -34,6 +51,43 @@ http://localhost:8008
 ```json
 {
   "insight_payload": {}
+}
+```
+
+兼容输入：
+
+```json
+{
+  "research_id": "task_demo",
+  "report": "demo report",
+  "insight_payload": {},
+  "insight_json_path": "outputs/task_demo.insight.json"
+}
+```
+
+```json
+{
+  "type": "path",
+  "output": {
+    "insight_payload": {},
+    "insight_json": "outputs/task_demo.insight.json"
+  }
+}
+```
+
+```json
+{
+  "report": {
+    "id": "task_demo",
+    "orderedData": [
+      {
+        "type": "path",
+        "output": {
+          "insight_payload": {}
+        }
+      }
+    ]
+  }
 }
 ```
 
@@ -179,8 +233,31 @@ source_index[].source_grade
 ## 前端展示条件
 
 - 默认调用 `/api/graph/ingest`。
+- 导入 JSON 支持裸 `insight_payload`、主后端 `/report/` 完整响应、WebSocket `path` 消息和 `/api/reports/{research_id}` 返回内容。
+- 导入弹窗支持按 report id、`outputs/*.insight.json` 路径或完整 URL 从主后端拉取结果。
 - 图谱展示优先使用 `visualization_payload`，该数据来自 Neo4j 查询。
 - `company_edges` 非空：显示公司关系图。
 - `company_edges` 为空：显示空状态和 `persistence_meta`。
 - `profile_edges` 非空：点击公司节点后展示业务线、产品线、核心技术关系。
 - `persistence_meta.status` 展示 Neo4j 主存储状态。
+
+## 联调注意事项
+
+主后端 CORS 默认只允许 3000。前端工作台运行在 3001 时，需要启动主后端前配置：
+
+```powershell
+$env:CORS_ALLOW_ORIGINS="http://localhost:3001,http://127.0.0.1:3001,http://localhost:3000,http://127.0.0.1:3000"
+```
+
+推荐联调顺序：
+
+```text
+1. 启动 Neo4j。
+2. 启动 KG 服务 8008。
+3. 启动 Insight 主后端 8000。
+4. 启动 Insight-front-kg 前端 3001。
+5. 主后端生成报告，复制 report id 或 insight_json 路径。
+6. 前端导入弹窗拉取主后端结果。
+7. 点击写入 Neo4j。
+8. 在关联分析页查看图谱和证据。
+```

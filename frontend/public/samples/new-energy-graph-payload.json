@@ -1,0 +1,4418 @@
+{
+  "task_profile": {
+    "query": "新能源汽车",
+    "mode": "industry_insight",
+    "industry": "新能源汽车",
+    "profile_id": "new_energy",
+    "profile_name": "新能源汽车",
+    "source_count": 6
+  },
+  "graph_nodes": [
+    {
+      "node_id": "industry:新能源汽车",
+      "node_type": "Industry",
+      "name": "新能源汽车",
+      "aliases": [],
+      "normalized_name": "新能源汽车",
+      "source_refs": [],
+      "raw_mentions": [
+        "新能源汽车"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "segment:上游",
+      "node_type": "Segment",
+      "name": "上游",
+      "aliases": [],
+      "normalized_name": "上游",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "上游"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:动力电池",
+      "node_type": "Subsegment",
+      "name": "动力电池",
+      "aliases": [],
+      "normalized_name": "动力电池",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "动力电池"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:电池材料",
+      "node_type": "Subsegment",
+      "name": "电池材料",
+      "aliases": [],
+      "normalized_name": "电池材料",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "电池材料"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:电驱系统",
+      "node_type": "Subsegment",
+      "name": "电驱系统",
+      "aliases": [],
+      "normalized_name": "电驱系统",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "电驱系统"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "segment:中游",
+      "node_type": "Segment",
+      "name": "中游",
+      "aliases": [],
+      "normalized_name": "中游",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "中游"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:整车制造",
+      "node_type": "Subsegment",
+      "name": "整车制造",
+      "aliases": [],
+      "normalized_name": "整车制造",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "整车制造"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:三电系统",
+      "node_type": "Subsegment",
+      "name": "三电系统",
+      "aliases": [],
+      "normalized_name": "三电系统",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "三电系统"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:智能化平台",
+      "node_type": "Subsegment",
+      "name": "智能化平台",
+      "aliases": [],
+      "normalized_name": "智能化平台",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "智能化平台"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "segment:下游",
+      "node_type": "Segment",
+      "name": "下游",
+      "aliases": [],
+      "normalized_name": "下游",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "下游"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:充电设施",
+      "node_type": "Subsegment",
+      "name": "充电设施",
+      "aliases": [],
+      "normalized_name": "充电设施",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "充电设施"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:运营服务",
+      "node_type": "Subsegment",
+      "name": "运营服务",
+      "aliases": [],
+      "normalized_name": "运营服务",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "运营服务"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "subsegment:终端应用",
+      "node_type": "Subsegment",
+      "name": "终端应用",
+      "aliases": [],
+      "normalized_name": "终端应用",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "终端应用"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "company:宁德时代",
+      "node_type": "Company",
+      "name": "宁德时代",
+      "aliases": [
+        "CATL"
+      ],
+      "normalized_name": "宁德时代",
+      "source_refs": [
+        "https://example.com/catl-report"
+      ],
+      "raw_mentions": [
+        "宁德时代",
+        "CATL"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "company:比亚迪",
+      "node_type": "Company",
+      "name": "比亚迪",
+      "aliases": [
+        "BYD"
+      ],
+      "normalized_name": "比亚迪",
+      "source_refs": [
+        "https://example.com/byd-report"
+      ],
+      "raw_mentions": [
+        "比亚迪",
+        "BYD"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "company:特斯拉",
+      "node_type": "Company",
+      "name": "特斯拉",
+      "aliases": [
+        "Tesla"
+      ],
+      "normalized_name": "特斯拉",
+      "source_refs": [
+        "https://example.com/tesla-site"
+      ],
+      "raw_mentions": [
+        "特斯拉",
+        "Tesla"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "company:特来电",
+      "node_type": "Company",
+      "name": "特来电",
+      "aliases": [],
+      "normalized_name": "特来电",
+      "source_refs": [
+        "https://example.com/teld"
+      ],
+      "raw_mentions": [
+        "特来电"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "businessline:动力电池业务",
+      "node_type": "BusinessLine",
+      "name": "动力电池业务",
+      "aliases": [],
+      "normalized_name": "动力电池业务",
+      "source_refs": [
+        "https://example.com/catl-report"
+      ],
+      "raw_mentions": [
+        "动力电池业务"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "businessline:储能电池业务",
+      "node_type": "BusinessLine",
+      "name": "储能电池业务",
+      "aliases": [],
+      "normalized_name": "储能电池业务",
+      "source_refs": [
+        "https://example.com/catl-report"
+      ],
+      "raw_mentions": [
+        "储能电池业务"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "product:动力电池",
+      "node_type": "Product",
+      "name": "动力电池",
+      "aliases": [],
+      "normalized_name": "动力电池",
+      "source_refs": [
+        "https://example.com/catl-report"
+      ],
+      "raw_mentions": [
+        "动力电池"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "product:储能系统",
+      "node_type": "Product",
+      "name": "储能系统",
+      "aliases": [],
+      "normalized_name": "储能系统",
+      "source_refs": [
+        "https://example.com/catl-report"
+      ],
+      "raw_mentions": [
+        "储能系统"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "technology:电池管理系统",
+      "node_type": "Technology",
+      "name": "电池管理系统",
+      "aliases": [],
+      "normalized_name": "电池管理系统",
+      "source_refs": [
+        "https://example.com/catl-report"
+      ],
+      "raw_mentions": [
+        "电池管理系统"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "technology:磷酸铁锂电池技术",
+      "node_type": "Technology",
+      "name": "磷酸铁锂电池技术",
+      "aliases": [],
+      "normalized_name": "磷酸铁锂电池技术",
+      "source_refs": [
+        "https://example.com/catl-report"
+      ],
+      "raw_mentions": [
+        "磷酸铁锂电池技术"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "businessline:新能源汽车业务",
+      "node_type": "BusinessLine",
+      "name": "新能源汽车业务",
+      "aliases": [],
+      "normalized_name": "新能源汽车业务",
+      "source_refs": [
+        "https://example.com/byd-report"
+      ],
+      "raw_mentions": [
+        "新能源汽车业务"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "product:新能源汽车",
+      "node_type": "Product",
+      "name": "新能源汽车",
+      "aliases": [],
+      "normalized_name": "新能源汽车",
+      "source_refs": [
+        "https://example.com/byd-report"
+      ],
+      "raw_mentions": [
+        "新能源汽车"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "product:刀片电池",
+      "node_type": "Product",
+      "name": "刀片电池",
+      "aliases": [],
+      "normalized_name": "刀片电池",
+      "source_refs": [
+        "https://example.com/byd-report"
+      ],
+      "raw_mentions": [
+        "刀片电池"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "technology:三电系统",
+      "node_type": "Technology",
+      "name": "三电系统",
+      "aliases": [],
+      "normalized_name": "三电系统",
+      "source_refs": [
+        "https://example.com/byd-report"
+      ],
+      "raw_mentions": [
+        "三电系统"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "businessline:智能化平台",
+      "node_type": "BusinessLine",
+      "name": "智能化平台",
+      "aliases": [],
+      "normalized_name": "智能化平台",
+      "source_refs": [
+        "https://example.com/tesla-site"
+      ],
+      "raw_mentions": [
+        "智能化平台"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "product:电动车",
+      "node_type": "Product",
+      "name": "电动车",
+      "aliases": [],
+      "normalized_name": "电动车",
+      "source_refs": [
+        "https://example.com/tesla-site"
+      ],
+      "raw_mentions": [
+        "电动车"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "product:能源补能服务",
+      "node_type": "Product",
+      "name": "能源补能服务",
+      "aliases": [],
+      "normalized_name": "能源补能服务",
+      "source_refs": [
+        "https://example.com/tesla-site"
+      ],
+      "raw_mentions": [
+        "能源补能服务"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "technology:整车软件平台",
+      "node_type": "Technology",
+      "name": "整车软件平台",
+      "aliases": [],
+      "normalized_name": "整车软件平台",
+      "source_refs": [
+        "https://example.com/tesla-site"
+      ],
+      "raw_mentions": [
+        "整车软件平台"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "technology:电驱控制",
+      "node_type": "Technology",
+      "name": "电驱控制",
+      "aliases": [],
+      "normalized_name": "电驱控制",
+      "source_refs": [
+        "https://example.com/tesla-site"
+      ],
+      "raw_mentions": [
+        "电驱控制"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "businessline:充电运营服务",
+      "node_type": "BusinessLine",
+      "name": "充电运营服务",
+      "aliases": [],
+      "normalized_name": "充电运营服务",
+      "source_refs": [
+        "https://example.com/teld"
+      ],
+      "raw_mentions": [
+        "充电运营服务"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "product:充电桩",
+      "node_type": "Product",
+      "name": "充电桩",
+      "aliases": [],
+      "normalized_name": "充电桩",
+      "source_refs": [
+        "https://example.com/teld"
+      ],
+      "raw_mentions": [
+        "充电桩"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "product:充电网络",
+      "node_type": "Product",
+      "name": "充电网络",
+      "aliases": [],
+      "normalized_name": "充电网络",
+      "source_refs": [
+        "https://example.com/teld"
+      ],
+      "raw_mentions": [
+        "充电网络"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "technology:快充技术",
+      "node_type": "Technology",
+      "name": "快充技术",
+      "aliases": [],
+      "normalized_name": "快充技术",
+      "source_refs": [
+        "https://example.com/teld"
+      ],
+      "raw_mentions": [
+        "快充技术"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "technology:充电运营平台",
+      "node_type": "Technology",
+      "name": "充电运营平台",
+      "aliases": [],
+      "normalized_name": "充电运营平台",
+      "source_refs": [
+        "https://example.com/teld"
+      ],
+      "raw_mentions": [
+        "充电运营平台"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "source:https://example.com/nev-chain",
+      "node_type": "Source",
+      "name": "https://example.com/nev-chain",
+      "aliases": [
+        "新能源汽车产业链说明"
+      ],
+      "normalized_name": "https://example.com/nev-chain",
+      "source_refs": [
+        "https://example.com/nev-chain"
+      ],
+      "raw_mentions": [
+        "https://example.com/nev-chain",
+        "新能源汽车产业链说明"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "source:https://example.com/catl-report",
+      "node_type": "Source",
+      "name": "https://example.com/catl-report",
+      "aliases": [
+        "宁德时代年度报告"
+      ],
+      "normalized_name": "https://example.com/catl-report",
+      "source_refs": [
+        "https://example.com/catl-report"
+      ],
+      "raw_mentions": [
+        "https://example.com/catl-report",
+        "宁德时代年度报告"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "source:https://example.com/catl-byd",
+      "node_type": "Source",
+      "name": "https://example.com/catl-byd",
+      "aliases": [
+        "宁德时代与比亚迪配套关系"
+      ],
+      "normalized_name": "https://example.com/catl-byd",
+      "source_refs": [
+        "https://example.com/catl-byd"
+      ],
+      "raw_mentions": [
+        "https://example.com/catl-byd",
+        "宁德时代与比亚迪配套关系"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "source:https://example.com/catl-tesla",
+      "node_type": "Source",
+      "name": "https://example.com/catl-tesla",
+      "aliases": [
+        "宁德时代与特斯拉配套关系"
+      ],
+      "normalized_name": "https://example.com/catl-tesla",
+      "source_refs": [
+        "https://example.com/catl-tesla"
+      ],
+      "raw_mentions": [
+        "https://example.com/catl-tesla",
+        "宁德时代与特斯拉配套关系"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "source:https://example.com/byd-report",
+      "node_type": "Source",
+      "name": "https://example.com/byd-report",
+      "aliases": [
+        "比亚迪业务介绍"
+      ],
+      "normalized_name": "https://example.com/byd-report",
+      "source_refs": [
+        "https://example.com/byd-report"
+      ],
+      "raw_mentions": [
+        "https://example.com/byd-report",
+        "比亚迪业务介绍"
+      ],
+      "normalization_method": "exact"
+    },
+    {
+      "node_id": "source:https://example.com/teld",
+      "node_type": "Source",
+      "name": "https://example.com/teld",
+      "aliases": [
+        "特来电业务介绍"
+      ],
+      "normalized_name": "https://example.com/teld",
+      "source_refs": [
+        "https://example.com/teld"
+      ],
+      "raw_mentions": [
+        "https://example.com/teld",
+        "特来电业务介绍"
+      ],
+      "normalization_method": "exact"
+    }
+  ],
+  "relation_candidates": [
+    {
+      "rel_id": "rel:b16137324363dd0c",
+      "head": "product:新能源汽车",
+      "head_type": "Industry",
+      "relation": "industry_has_segment",
+      "tail": "segment:上游",
+      "tail_type": "Segment",
+      "evidence_refs": [],
+      "evidence_text": "上游包括动力电池材料、电芯制造和关键零部件供应。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "industry_has_segment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:882e11f98a7ad51e",
+      "head": "segment:上游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:动力电池",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "上游包括动力电池材料、电芯制造和关键零部件供应。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.65,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:fd1995e4fb59a45e",
+      "head": "segment:上游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:电池材料",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "上游包括动力电池材料、电芯制造和关键零部件供应。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.65,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:401d880346b09a76",
+      "head": "segment:上游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:电驱系统",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "上游包括动力电池材料、电芯制造和关键零部件供应。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:fa14447a74cfdc55",
+      "head": "product:新能源汽车",
+      "head_type": "Industry",
+      "relation": "industry_has_segment",
+      "tail": "segment:中游",
+      "tail_type": "Segment",
+      "evidence_refs": [],
+      "evidence_text": "中游主要是整车制造、三电系统集成和智能化平台。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "industry_has_segment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:a03f90f3c06f942b",
+      "head": "segment:中游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:整车制造",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "中游主要是整车制造、三电系统集成和智能化平台。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.65,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:74432a76ad1f6134",
+      "head": "segment:中游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:三电系统",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "中游主要是整车制造、三电系统集成和智能化平台。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.65,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:58d99ed947f12019",
+      "head": "segment:中游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:智能化平台",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "中游主要是整车制造、三电系统集成和智能化平台。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.65,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:bc0b61db67de93d7",
+      "head": "product:新能源汽车",
+      "head_type": "Industry",
+      "relation": "industry_has_segment",
+      "tail": "segment:下游",
+      "tail_type": "Segment",
+      "evidence_refs": [],
+      "evidence_text": "下游包括充电设施、运营服务和终端消费者。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "industry_has_segment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:abdb4ad308790d06",
+      "head": "segment:下游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:充电设施",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "下游包括充电设施、运营服务和终端消费者。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.65,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:5db84ce826daf3d0",
+      "head": "segment:下游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:运营服务",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "下游包括充电设施、运营服务和终端消费者。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.65,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:9c0da9f313ad8597",
+      "head": "segment:下游",
+      "head_type": "Segment",
+      "relation": "segment_has_subsegment",
+      "tail": "subsegment:终端应用",
+      "tail_type": "Subsegment",
+      "evidence_refs": [],
+      "evidence_text": "下游包括充电设施、运营服务和终端消费者。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "segment_has_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:ca802a523f905843",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_in_segment",
+      "tail": "segment:上游",
+      "tail_type": "Segment",
+      "evidence_refs": [],
+      "evidence_text": "宁德时代是动力电池龙头企业。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_segment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:03c521de805b08bb",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_in_segment",
+      "tail": "segment:中游",
+      "tail_type": "Segment",
+      "evidence_refs": [],
+      "evidence_text": "比亚迪覆盖电池、三电系统和整车制造。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_segment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:90423746684e4c44",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_in_segment",
+      "tail": "segment:中游",
+      "tail_type": "Segment",
+      "evidence_refs": [],
+      "evidence_text": "特斯拉是新能源汽车整车企业。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_segment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:e3851432730502a5",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_in_segment",
+      "tail": "segment:下游",
+      "tail_type": "Segment",
+      "evidence_refs": [],
+      "evidence_text": "特来电提供充电网络与运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "",
+      "source_grade": "",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_segment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.55,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.0,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:6cf319a013434a44",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_in_subsegment",
+      "tail": "subsegment:动力电池",
+      "tail_type": "Subsegment",
+      "evidence_refs": [
+        "evidence:58d79f94783dfbca"
+      ],
+      "evidence_text": "宁德时代主营动力电池和储能系统，核心技术包括电池管理系统。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:fff1a7262ac2bcff",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:动力电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:048827a07c1b3b48"
+      ],
+      "evidence_text": "宁德时代主营动力电池业务。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "动力电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:04cbaba9943b8bd9",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:储能电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:8c8e0d4714b4730c"
+      ],
+      "evidence_text": "宁德时代布局储能电池业务。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "储能电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:7224dcce256744fd",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:动力电池",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:0c67956f219c47a3"
+      ],
+      "evidence_text": "宁德时代动力电池产品服务新能源汽车客户。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "动力电池",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:6efaee4fe5ec8b98",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:储能系统",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:99e8e168a9509254"
+      ],
+      "evidence_text": "宁德时代提供储能系统产品。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "储能系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:24b4b14495c8d233",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:电池管理系统",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:a3ac4038a90ac97a"
+      ],
+      "evidence_text": "宁德时代核心技术包括电池管理系统。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "电池管理系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f19ae05f288305c7",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:磷酸铁锂电池技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7e7e2d1a86788226"
+      ],
+      "evidence_text": "宁德时代在磷酸铁锂电池技术方面持续投入。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "磷酸铁锂电池技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:b5eb2871cf61bad1",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "vehicle_battery_supply",
+      "tail": "company:比亚迪",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:f41a3c7a68335359",
+        "evidence:66574995b6879205"
+      ],
+      "evidence_text": "宁德时代为比亚迪提供动力电池相关产品。",
+      "source_url": "https://example.com/catl-byd",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "card_structured",
+      "relation_level": "industry_template",
+      "relation_name": "动力电池供应",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "宁德时代向比亚迪提供动力电池相关产品",
+      "edge_kind": "company",
+      "confidence": 0.88,
+      "status": "verified",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.08,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:c671ab81d93151b1",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "vehicle_battery_supply",
+      "tail": "company:特斯拉",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:c0f161201275b854",
+        "evidence:fc27b3c88d22a05a"
+      ],
+      "evidence_text": "宁德时代为特斯拉提供动力电池配套。",
+      "source_url": "https://example.com/catl-tesla",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "card_structured",
+      "relation_level": "industry_template",
+      "relation_name": "动力电池配套",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "宁德时代为特斯拉提供动力电池产品",
+      "edge_kind": "company",
+      "confidence": 0.88,
+      "status": "verified",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.08,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:6853f2ba7039b9f8",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_in_subsegment",
+      "tail": "subsegment:整车制造",
+      "tail_type": "Subsegment",
+      "evidence_refs": [
+        "evidence:b386ed28e8a4897d"
+      ],
+      "evidence_text": "整车制造",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.7,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:2eda9a0729ca4e97",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:新能源汽车业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:58cde2fdadb50cde"
+      ],
+      "evidence_text": "比亚迪新能源汽车业务覆盖乘用车和商用车。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "新能源汽车业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8d934d6b9f33b86e",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:动力电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:f1f603e4b42dbf60"
+      ],
+      "evidence_text": "比亚迪具备动力电池业务能力。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "动力电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8f0960f6a9d76263",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:新能源汽车",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:b714c126689df827"
+      ],
+      "evidence_text": "比亚迪销售新能源汽车产品。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "新能源汽车",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:23aea70e112fb3af",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:刀片电池",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:6c14c0fe4ab0852e"
+      ],
+      "evidence_text": "刀片电池是比亚迪电池产品之一。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "刀片电池",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f0c1fadb4de369f8",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:三电系统",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:9e6b2e295346e719"
+      ],
+      "evidence_text": "比亚迪具备三电系统集成能力。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "三电系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:a9b7763facb63836",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:磷酸铁锂电池技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7e7e2d1a86788226"
+      ],
+      "evidence_text": "磷酸铁锂电池技术",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "磷酸铁锂电池技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.7,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:839d8e98aa4a671f",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "cooperate_with",
+      "tail": "company:特来电",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:3aa355b8e5ba693a"
+      ],
+      "evidence_text": "比亚迪与充电服务企业围绕补能生态开展合作。",
+      "source_url": "https://example.com/byd-charging",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "B",
+      "relation_origin": "card_structured",
+      "relation_level": "generic",
+      "relation_name": "合作",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "整车企业与充电服务企业共建补能生态",
+      "edge_kind": "company",
+      "confidence": 0.63,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:08fd2c19e2458249",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_in_subsegment",
+      "tail": "subsegment:整车制造",
+      "tail_type": "Subsegment",
+      "evidence_refs": [
+        "evidence:b386ed28e8a4897d"
+      ],
+      "evidence_text": "整车制造",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.63,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:2c31da624cc11607",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:新能源汽车业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:f6cad7175d577024"
+      ],
+      "evidence_text": "特斯拉主营电动车业务。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "新能源汽车业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.63,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:153b34879328f8f9",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:智能化平台",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [],
+      "evidence_text": "智能化平台",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "智能化平台",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.63,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:298e1958c5fac3b2",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:电动车",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:68bcfd01ea9333cd"
+      ],
+      "evidence_text": "特斯拉提供电动车产品。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "电动车",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:80387d2a14c2dee5",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:能源补能服务",
+      "tail_type": "Product",
+      "evidence_refs": [],
+      "evidence_text": "能源补能服务",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "能源补能服务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.63,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f1607c9696f9823b",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:整车软件平台",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:db80343fd62d2b7c"
+      ],
+      "evidence_text": "特斯拉重视整车软件平台能力。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "整车软件平台",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:3fb08fae19c11728",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:电驱控制",
+      "tail_type": "Technology",
+      "evidence_refs": [],
+      "evidence_text": "电驱控制",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "电驱控制",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.63,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:b30ba0fee830703d",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_in_subsegment",
+      "tail": "subsegment:充电设施",
+      "tail_type": "Subsegment",
+      "evidence_refs": [
+        "evidence:b386ed28e8a4897d"
+      ],
+      "evidence_text": "充电设施",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.63,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:403d5508a4f66a83",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:充电运营服务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:12393c4b44262adf"
+      ],
+      "evidence_text": "特来电提供充电运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "充电运营服务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:33c1d1fc78391d59",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:充电桩",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:3e1537d5e8a93c27"
+      ],
+      "evidence_text": "特来电提供充电桩相关产品和服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "充电桩",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:56e3571ac5b1c74e",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:充电网络",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:ed172ddef9ff72ee"
+      ],
+      "evidence_text": "特来电提供充电网络建设和运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "充电网络",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8f3d3d03dccaaedd",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:快充技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7a3a883159ff1c80"
+      ],
+      "evidence_text": "特来电布局快充技术和平台能力。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "快充技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:1a5826c6ea270e26",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:充电运营平台",
+      "tail_type": "Technology",
+      "evidence_refs": [],
+      "evidence_text": "充电运营平台",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "充电运营平台",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.63,
+      "status": "weak_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    }
+  ],
+  "graph_edges": [
+    {
+      "rel_id": "rel:6cf319a013434a44",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_in_subsegment",
+      "tail": "subsegment:动力电池",
+      "tail_type": "Subsegment",
+      "evidence_refs": [
+        "evidence:58d79f94783dfbca"
+      ],
+      "evidence_text": "宁德时代主营动力电池和储能系统，核心技术包括电池管理系统。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:fff1a7262ac2bcff",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:动力电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:048827a07c1b3b48"
+      ],
+      "evidence_text": "宁德时代主营动力电池业务。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "动力电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:04cbaba9943b8bd9",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:储能电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:8c8e0d4714b4730c"
+      ],
+      "evidence_text": "宁德时代布局储能电池业务。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "储能电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:7224dcce256744fd",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:动力电池",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:0c67956f219c47a3"
+      ],
+      "evidence_text": "宁德时代动力电池产品服务新能源汽车客户。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "动力电池",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:6efaee4fe5ec8b98",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:储能系统",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:99e8e168a9509254"
+      ],
+      "evidence_text": "宁德时代提供储能系统产品。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "储能系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:24b4b14495c8d233",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:电池管理系统",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:a3ac4038a90ac97a"
+      ],
+      "evidence_text": "宁德时代核心技术包括电池管理系统。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "电池管理系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f19ae05f288305c7",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:磷酸铁锂电池技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7e7e2d1a86788226"
+      ],
+      "evidence_text": "宁德时代在磷酸铁锂电池技术方面持续投入。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "磷酸铁锂电池技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:b5eb2871cf61bad1",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "vehicle_battery_supply",
+      "tail": "company:比亚迪",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:f41a3c7a68335359",
+        "evidence:66574995b6879205"
+      ],
+      "evidence_text": "宁德时代为比亚迪提供动力电池相关产品。",
+      "source_url": "https://example.com/catl-byd",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "card_structured",
+      "relation_level": "industry_template",
+      "relation_name": "动力电池供应",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "宁德时代向比亚迪提供动力电池相关产品",
+      "edge_kind": "company",
+      "confidence": 0.88,
+      "status": "verified",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.08,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:c671ab81d93151b1",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "vehicle_battery_supply",
+      "tail": "company:特斯拉",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:c0f161201275b854",
+        "evidence:fc27b3c88d22a05a"
+      ],
+      "evidence_text": "宁德时代为特斯拉提供动力电池配套。",
+      "source_url": "https://example.com/catl-tesla",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "card_structured",
+      "relation_level": "industry_template",
+      "relation_name": "动力电池配套",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "宁德时代为特斯拉提供动力电池产品",
+      "edge_kind": "company",
+      "confidence": 0.88,
+      "status": "verified",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.08,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:6853f2ba7039b9f8",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_in_subsegment",
+      "tail": "subsegment:整车制造",
+      "tail_type": "Subsegment",
+      "evidence_refs": [
+        "evidence:b386ed28e8a4897d"
+      ],
+      "evidence_text": "整车制造",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.7,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:2eda9a0729ca4e97",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:新能源汽车业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:58cde2fdadb50cde"
+      ],
+      "evidence_text": "比亚迪新能源汽车业务覆盖乘用车和商用车。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "新能源汽车业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8d934d6b9f33b86e",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:动力电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:f1f603e4b42dbf60"
+      ],
+      "evidence_text": "比亚迪具备动力电池业务能力。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "动力电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8f0960f6a9d76263",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:新能源汽车",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:b714c126689df827"
+      ],
+      "evidence_text": "比亚迪销售新能源汽车产品。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "新能源汽车",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:23aea70e112fb3af",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:刀片电池",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:6c14c0fe4ab0852e"
+      ],
+      "evidence_text": "刀片电池是比亚迪电池产品之一。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "刀片电池",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f0c1fadb4de369f8",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:三电系统",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:9e6b2e295346e719"
+      ],
+      "evidence_text": "比亚迪具备三电系统集成能力。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "三电系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:a9b7763facb63836",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:磷酸铁锂电池技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7e7e2d1a86788226"
+      ],
+      "evidence_text": "磷酸铁锂电池技术",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "磷酸铁锂电池技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.7,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:298e1958c5fac3b2",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:电动车",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:68bcfd01ea9333cd"
+      ],
+      "evidence_text": "特斯拉提供电动车产品。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "电动车",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f1607c9696f9823b",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:整车软件平台",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:db80343fd62d2b7c"
+      ],
+      "evidence_text": "特斯拉重视整车软件平台能力。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "整车软件平台",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:403d5508a4f66a83",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:充电运营服务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:12393c4b44262adf"
+      ],
+      "evidence_text": "特来电提供充电运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "充电运营服务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:33c1d1fc78391d59",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:充电桩",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:3e1537d5e8a93c27"
+      ],
+      "evidence_text": "特来电提供充电桩相关产品和服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "充电桩",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:56e3571ac5b1c74e",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:充电网络",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:ed172ddef9ff72ee"
+      ],
+      "evidence_text": "特来电提供充电网络建设和运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "充电网络",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8f3d3d03dccaaedd",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:快充技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7a3a883159ff1c80"
+      ],
+      "evidence_text": "特来电布局快充技术和平台能力。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "快充技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    }
+  ],
+  "company_edges": [
+    {
+      "rel_id": "rel:b5eb2871cf61bad1",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "vehicle_battery_supply",
+      "tail": "company:比亚迪",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:f41a3c7a68335359",
+        "evidence:66574995b6879205"
+      ],
+      "evidence_text": "宁德时代为比亚迪提供动力电池相关产品。",
+      "source_url": "https://example.com/catl-byd",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "card_structured",
+      "relation_level": "industry_template",
+      "relation_name": "动力电池供应",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "宁德时代向比亚迪提供动力电池相关产品",
+      "edge_kind": "company",
+      "confidence": 0.88,
+      "status": "verified",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.08,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:c671ab81d93151b1",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "vehicle_battery_supply",
+      "tail": "company:特斯拉",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:c0f161201275b854",
+        "evidence:fc27b3c88d22a05a"
+      ],
+      "evidence_text": "宁德时代为特斯拉提供动力电池配套。",
+      "source_url": "https://example.com/catl-tesla",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "card_structured",
+      "relation_level": "industry_template",
+      "relation_name": "动力电池配套",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "宁德时代为特斯拉提供动力电池产品",
+      "edge_kind": "company",
+      "confidence": 0.88,
+      "status": "verified",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.08,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    }
+  ],
+  "profile_edges": [
+    {
+      "rel_id": "rel:fff1a7262ac2bcff",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:动力电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:048827a07c1b3b48"
+      ],
+      "evidence_text": "宁德时代主营动力电池业务。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "动力电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:04cbaba9943b8bd9",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:储能电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:8c8e0d4714b4730c"
+      ],
+      "evidence_text": "宁德时代布局储能电池业务。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "储能电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:7224dcce256744fd",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:动力电池",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:0c67956f219c47a3"
+      ],
+      "evidence_text": "宁德时代动力电池产品服务新能源汽车客户。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "动力电池",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:6efaee4fe5ec8b98",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:储能系统",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:99e8e168a9509254"
+      ],
+      "evidence_text": "宁德时代提供储能系统产品。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "储能系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:24b4b14495c8d233",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:电池管理系统",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:a3ac4038a90ac97a"
+      ],
+      "evidence_text": "宁德时代核心技术包括电池管理系统。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "电池管理系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f19ae05f288305c7",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:磷酸铁锂电池技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7e7e2d1a86788226"
+      ],
+      "evidence_text": "宁德时代在磷酸铁锂电池技术方面持续投入。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "磷酸铁锂电池技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:2eda9a0729ca4e97",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:新能源汽车业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:58cde2fdadb50cde"
+      ],
+      "evidence_text": "比亚迪新能源汽车业务覆盖乘用车和商用车。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "新能源汽车业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8d934d6b9f33b86e",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:动力电池业务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:f1f603e4b42dbf60"
+      ],
+      "evidence_text": "比亚迪具备动力电池业务能力。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "动力电池业务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8f0960f6a9d76263",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:新能源汽车",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:b714c126689df827"
+      ],
+      "evidence_text": "比亚迪销售新能源汽车产品。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "新能源汽车",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:23aea70e112fb3af",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:刀片电池",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:6c14c0fe4ab0852e"
+      ],
+      "evidence_text": "刀片电池是比亚迪电池产品之一。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "刀片电池",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f0c1fadb4de369f8",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:三电系统",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:9e6b2e295346e719"
+      ],
+      "evidence_text": "比亚迪具备三电系统集成能力。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "三电系统",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:a9b7763facb63836",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:磷酸铁锂电池技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7e7e2d1a86788226"
+      ],
+      "evidence_text": "磷酸铁锂电池技术",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "磷酸铁锂电池技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.7,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:298e1958c5fac3b2",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:电动车",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:68bcfd01ea9333cd"
+      ],
+      "evidence_text": "特斯拉提供电动车产品。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "电动车",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:f1607c9696f9823b",
+      "head": "company:特斯拉",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:整车软件平台",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:db80343fd62d2b7c"
+      ],
+      "evidence_text": "特斯拉重视整车软件平台能力。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "整车软件平台",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:403d5508a4f66a83",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_business_line",
+      "tail": "businessline:充电运营服务",
+      "tail_type": "BusinessLine",
+      "evidence_refs": [
+        "evidence:12393c4b44262adf"
+      ],
+      "evidence_text": "特来电提供充电运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_business_line",
+      "field_name": "business_lines",
+      "field_value": "充电运营服务",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:33c1d1fc78391d59",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:充电桩",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:3e1537d5e8a93c27"
+      ],
+      "evidence_text": "特来电提供充电桩相关产品和服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "充电桩",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:56e3571ac5b1c74e",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_product",
+      "tail": "product:充电网络",
+      "tail_type": "Product",
+      "evidence_refs": [
+        "evidence:ed172ddef9ff72ee"
+      ],
+      "evidence_text": "特来电提供充电网络建设和运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_product",
+      "field_name": "product_lines",
+      "field_value": "充电网络",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:8f3d3d03dccaaedd",
+      "head": "company:特来电",
+      "head_type": "Company",
+      "relation": "company_has_technology",
+      "tail": "technology:快充技术",
+      "tail_type": "Technology",
+      "evidence_refs": [
+        "evidence:7a3a883159ff1c80"
+      ],
+      "evidence_text": "特来电布局快充技术和平台能力。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B",
+      "relation_origin": "explicit_evidence",
+      "relation_level": "",
+      "relation_name": "company_has_technology",
+      "field_name": "core_technologies",
+      "field_value": "快充技术",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "profile",
+      "confidence": 0.73,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.08,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    }
+  ],
+  "structural_edges": [
+    {
+      "rel_id": "rel:6cf319a013434a44",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "company_in_subsegment",
+      "tail": "subsegment:动力电池",
+      "tail_type": "Subsegment",
+      "evidence_refs": [
+        "evidence:58d79f94783dfbca"
+      ],
+      "evidence_text": "宁德时代主营动力电池和储能系统，核心技术包括电池管理系统。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.8,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:6853f2ba7039b9f8",
+      "head": "company:比亚迪",
+      "head_type": "Company",
+      "relation": "company_in_subsegment",
+      "tail": "subsegment:整车制造",
+      "tail_type": "Subsegment",
+      "evidence_refs": [
+        "evidence:b386ed28e8a4897d"
+      ],
+      "evidence_text": "整车制造",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A",
+      "relation_origin": "structured_field",
+      "relation_level": "",
+      "relation_name": "company_in_subsegment",
+      "field_name": "",
+      "field_value": "",
+      "direction": "",
+      "explanation": "",
+      "edge_kind": "structural",
+      "confidence": 0.7,
+      "status": "strong_candidate",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.0,
+        "multi_source": 0.0,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    }
+  ],
+  "inter_company_relations": [
+    {
+      "rel_id": "rel:b5eb2871cf61bad1",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "vehicle_battery_supply",
+      "tail": "company:比亚迪",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:f41a3c7a68335359",
+        "evidence:66574995b6879205"
+      ],
+      "evidence_text": "宁德时代为比亚迪提供动力电池相关产品。",
+      "source_url": "https://example.com/catl-byd",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "card_structured",
+      "relation_level": "industry_template",
+      "relation_name": "动力电池供应",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "宁德时代向比亚迪提供动力电池相关产品",
+      "edge_kind": "company",
+      "confidence": 0.88,
+      "status": "verified",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.08,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    },
+    {
+      "rel_id": "rel:c671ab81d93151b1",
+      "head": "company:宁德时代",
+      "head_type": "Company",
+      "relation": "vehicle_battery_supply",
+      "tail": "company:特斯拉",
+      "tail_type": "Company",
+      "evidence_refs": [
+        "evidence:c0f161201275b854",
+        "evidence:fc27b3c88d22a05a"
+      ],
+      "evidence_text": "宁德时代为特斯拉提供动力电池配套。",
+      "source_url": "https://example.com/catl-tesla",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A",
+      "relation_origin": "card_structured",
+      "relation_level": "industry_template",
+      "relation_name": "动力电池配套",
+      "field_name": "",
+      "field_value": "",
+      "direction": "head_to_tail",
+      "explanation": "宁德时代为特斯拉提供动力电池产品",
+      "edge_kind": "company",
+      "confidence": 0.88,
+      "status": "verified",
+      "direction_uncertain": false,
+      "score_breakdown": {
+        "base": 0.5,
+        "source_grade": 0.15,
+        "explicit_evidence": 0.1,
+        "multi_source": 0.08,
+        "entity_normalized": 0.05,
+        "freshness": 0.0,
+        "hard_cap": 1.0,
+        "hard_cap_reason": "none"
+      }
+    }
+  ],
+  "evidence_chunks": [
+    {
+      "chunk_id": "evidence:b386ed28e8a4897d",
+      "text": "新能源汽车产业链包括动力电池、整车制造和充电设施等环节。",
+      "source_url": "https://example.com/nev-chain",
+      "source_title": "新能源汽车产业链说明",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:58d79f94783dfbca",
+      "text": "宁德时代主营动力电池和储能系统，核心技术包括电池管理系统。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:f41a3c7a68335359",
+      "text": "宁德时代为比亚迪提供动力电池相关产品。",
+      "source_url": "https://example.com/catl-byd",
+      "source_title": "宁德时代与比亚迪配套关系",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:c0f161201275b854",
+      "text": "宁德时代为特斯拉提供动力电池配套。",
+      "source_url": "https://example.com/catl-tesla",
+      "source_title": "宁德时代与特斯拉配套关系",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:653071e82f2e3d1d",
+      "text": "比亚迪覆盖新能源汽车、动力电池和三电系统。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:ed172ddef9ff72ee",
+      "text": "特来电提供充电网络建设和运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B"
+    },
+    {
+      "chunk_id": "evidence:66574995b6879205",
+      "text": "目标企业=比亚迪；关系层级=industry_template；关系名称=动力电池供应；方向=本企业->目标企业；证据=宁德时代为比亚迪提供动力电池相关产品。；来源=https://example.com/catl-byd；来源等级=A；解释=宁德时代向比亚迪提供动力电池相关产品",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:fc27b3c88d22a05a",
+      "text": "目标企业=特斯拉；关系层级=industry_template；关系名称=动力电池配套；方向=本企业->目标企业；证据=宁德时代为特斯拉提供动力电池配套。；来源=https://example.com/catl-tesla；来源等级=A；解释=宁德时代为特斯拉提供动力电池产品",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:048827a07c1b3b48",
+      "text": "宁德时代主营动力电池业务。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:8c8e0d4714b4730c",
+      "text": "宁德时代布局储能电池业务。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:0c67956f219c47a3",
+      "text": "宁德时代动力电池产品服务新能源汽车客户。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:99e8e168a9509254",
+      "text": "宁德时代提供储能系统产品。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:a3ac4038a90ac97a",
+      "text": "宁德时代核心技术包括电池管理系统。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:7e7e2d1a86788226",
+      "text": "宁德时代在磷酸铁锂电池技术方面持续投入。",
+      "source_url": "https://example.com/catl-report",
+      "source_title": "宁德时代年度报告",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:3aa355b8e5ba693a",
+      "text": "目标企业=特来电；关系层级=generic；关系名称=合作；方向=本企业->目标企业；证据=比亚迪与充电服务企业围绕补能生态开展合作。；来源=https://example.com/byd-charging；来源等级=B；解释=整车企业与充电服务企业共建补能生态",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:58cde2fdadb50cde",
+      "text": "比亚迪新能源汽车业务覆盖乘用车和商用车。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:f1f603e4b42dbf60",
+      "text": "比亚迪具备动力电池业务能力。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:b714c126689df827",
+      "text": "比亚迪销售新能源汽车产品。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:6c14c0fe4ab0852e",
+      "text": "刀片电池是比亚迪电池产品之一。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:9e6b2e295346e719",
+      "text": "比亚迪具备三电系统集成能力。",
+      "source_url": "https://example.com/byd-report",
+      "source_title": "比亚迪业务介绍",
+      "source_grade": "A"
+    },
+    {
+      "chunk_id": "evidence:39b6b6ace7990da7",
+      "text": "特斯拉提供电动车和能源相关服务。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B"
+    },
+    {
+      "chunk_id": "evidence:f6cad7175d577024",
+      "text": "特斯拉主营电动车业务。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B"
+    },
+    {
+      "chunk_id": "evidence:68bcfd01ea9333cd",
+      "text": "特斯拉提供电动车产品。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B"
+    },
+    {
+      "chunk_id": "evidence:db80343fd62d2b7c",
+      "text": "特斯拉重视整车软件平台能力。",
+      "source_url": "https://example.com/tesla-site",
+      "source_title": "特斯拉官网",
+      "source_grade": "B"
+    },
+    {
+      "chunk_id": "evidence:12393c4b44262adf",
+      "text": "特来电提供充电运营服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B"
+    },
+    {
+      "chunk_id": "evidence:3e1537d5e8a93c27",
+      "text": "特来电提供充电桩相关产品和服务。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B"
+    },
+    {
+      "chunk_id": "evidence:7a3a883159ff1c80",
+      "text": "特来电布局快充技术和平台能力。",
+      "source_url": "https://example.com/teld",
+      "source_title": "特来电业务介绍",
+      "source_grade": "B"
+    }
+  ],
+  "normalization_index": [
+    {
+      "raw": "新能源汽车",
+      "canonical_id": "industry:新能源汽车",
+      "method": "exact"
+    },
+    {
+      "raw": "上游",
+      "canonical_id": "segment:上游",
+      "method": "exact"
+    },
+    {
+      "raw": "动力电池",
+      "canonical_id": "subsegment:动力电池",
+      "method": "exact"
+    },
+    {
+      "raw": "电池材料",
+      "canonical_id": "subsegment:电池材料",
+      "method": "exact"
+    },
+    {
+      "raw": "电驱系统",
+      "canonical_id": "subsegment:电驱系统",
+      "method": "exact"
+    },
+    {
+      "raw": "中游",
+      "canonical_id": "segment:中游",
+      "method": "exact"
+    },
+    {
+      "raw": "整车制造",
+      "canonical_id": "subsegment:整车制造",
+      "method": "exact"
+    },
+    {
+      "raw": "三电系统",
+      "canonical_id": "subsegment:三电系统",
+      "method": "exact"
+    },
+    {
+      "raw": "智能化平台",
+      "canonical_id": "subsegment:智能化平台",
+      "method": "exact"
+    },
+    {
+      "raw": "下游",
+      "canonical_id": "segment:下游",
+      "method": "exact"
+    },
+    {
+      "raw": "充电设施",
+      "canonical_id": "subsegment:充电设施",
+      "method": "exact"
+    },
+    {
+      "raw": "运营服务",
+      "canonical_id": "subsegment:运营服务",
+      "method": "exact"
+    },
+    {
+      "raw": "终端应用",
+      "canonical_id": "subsegment:终端应用",
+      "method": "exact"
+    },
+    {
+      "raw": "宁德时代",
+      "canonical_id": "company:宁德时代",
+      "method": "exact"
+    },
+    {
+      "raw": "比亚迪",
+      "canonical_id": "company:比亚迪",
+      "method": "exact"
+    },
+    {
+      "raw": "特斯拉",
+      "canonical_id": "company:特斯拉",
+      "method": "exact"
+    },
+    {
+      "raw": "特来电",
+      "canonical_id": "company:特来电",
+      "method": "exact"
+    },
+    {
+      "raw": "CATL",
+      "canonical_id": "company:宁德时代",
+      "method": "exact"
+    },
+    {
+      "raw": "动力电池业务",
+      "canonical_id": "businessline:动力电池业务",
+      "method": "exact"
+    },
+    {
+      "raw": "储能电池业务",
+      "canonical_id": "businessline:储能电池业务",
+      "method": "exact"
+    },
+    {
+      "raw": "动力电池",
+      "canonical_id": "product:动力电池",
+      "method": "exact"
+    },
+    {
+      "raw": "储能系统",
+      "canonical_id": "product:储能系统",
+      "method": "exact"
+    },
+    {
+      "raw": "电池管理系统",
+      "canonical_id": "technology:电池管理系统",
+      "method": "exact"
+    },
+    {
+      "raw": "磷酸铁锂电池技术",
+      "canonical_id": "technology:磷酸铁锂电池技术",
+      "method": "exact"
+    },
+    {
+      "raw": "BYD",
+      "canonical_id": "company:比亚迪",
+      "method": "exact"
+    },
+    {
+      "raw": "新能源汽车业务",
+      "canonical_id": "businessline:新能源汽车业务",
+      "method": "exact"
+    },
+    {
+      "raw": "新能源汽车",
+      "canonical_id": "product:新能源汽车",
+      "method": "exact"
+    },
+    {
+      "raw": "刀片电池",
+      "canonical_id": "product:刀片电池",
+      "method": "exact"
+    },
+    {
+      "raw": "三电系统",
+      "canonical_id": "technology:三电系统",
+      "method": "exact"
+    },
+    {
+      "raw": "Tesla",
+      "canonical_id": "company:特斯拉",
+      "method": "exact"
+    },
+    {
+      "raw": "智能化平台",
+      "canonical_id": "businessline:智能化平台",
+      "method": "exact"
+    },
+    {
+      "raw": "电动车",
+      "canonical_id": "product:电动车",
+      "method": "exact"
+    },
+    {
+      "raw": "能源补能服务",
+      "canonical_id": "product:能源补能服务",
+      "method": "exact"
+    },
+    {
+      "raw": "整车软件平台",
+      "canonical_id": "technology:整车软件平台",
+      "method": "exact"
+    },
+    {
+      "raw": "电驱控制",
+      "canonical_id": "technology:电驱控制",
+      "method": "exact"
+    },
+    {
+      "raw": "充电运营服务",
+      "canonical_id": "businessline:充电运营服务",
+      "method": "exact"
+    },
+    {
+      "raw": "充电桩",
+      "canonical_id": "product:充电桩",
+      "method": "exact"
+    },
+    {
+      "raw": "充电网络",
+      "canonical_id": "product:充电网络",
+      "method": "exact"
+    },
+    {
+      "raw": "快充技术",
+      "canonical_id": "technology:快充技术",
+      "method": "exact"
+    },
+    {
+      "raw": "充电运营平台",
+      "canonical_id": "technology:充电运营平台",
+      "method": "exact"
+    },
+    {
+      "raw": "https://example.com/nev-chain",
+      "canonical_id": "source:https://example.com/nev-chain",
+      "method": "exact"
+    },
+    {
+      "raw": "新能源汽车产业链说明",
+      "canonical_id": "source:https://example.com/nev-chain",
+      "method": "exact"
+    },
+    {
+      "raw": "https://example.com/catl-report",
+      "canonical_id": "source:https://example.com/catl-report",
+      "method": "exact"
+    },
+    {
+      "raw": "宁德时代年度报告",
+      "canonical_id": "source:https://example.com/catl-report",
+      "method": "exact"
+    },
+    {
+      "raw": "https://example.com/catl-byd",
+      "canonical_id": "source:https://example.com/catl-byd",
+      "method": "exact"
+    },
+    {
+      "raw": "宁德时代与比亚迪配套关系",
+      "canonical_id": "source:https://example.com/catl-byd",
+      "method": "exact"
+    },
+    {
+      "raw": "https://example.com/catl-tesla",
+      "canonical_id": "source:https://example.com/catl-tesla",
+      "method": "exact"
+    },
+    {
+      "raw": "宁德时代与特斯拉配套关系",
+      "canonical_id": "source:https://example.com/catl-tesla",
+      "method": "exact"
+    },
+    {
+      "raw": "https://example.com/byd-report",
+      "canonical_id": "source:https://example.com/byd-report",
+      "method": "exact"
+    },
+    {
+      "raw": "比亚迪业务介绍",
+      "canonical_id": "source:https://example.com/byd-report",
+      "method": "exact"
+    },
+    {
+      "raw": "https://example.com/teld",
+      "canonical_id": "source:https://example.com/teld",
+      "method": "exact"
+    },
+    {
+      "raw": "特来电业务介绍",
+      "canonical_id": "source:https://example.com/teld",
+      "method": "exact"
+    }
+  ],
+  "confidence_meta": {
+    "rule_version": "v1.0",
+    "candidate_count": 46,
+    "edge_count": 22,
+    "status_counts": {
+      "weak_candidate": 24,
+      "strong_candidate": 20,
+      "verified": 2
+    },
+    "edge_statuses": [
+      "verified",
+      "strong_candidate"
+    ]
+  },
+  "qa_index_hints": {
+    "industries": [
+      "新能源汽车"
+    ],
+    "companies": [
+      "宁德时代",
+      "比亚迪",
+      "特斯拉",
+      "特来电"
+    ],
+    "relations": [
+      "company_has_business_line",
+      "company_has_product",
+      "company_has_technology",
+      "company_in_subsegment",
+      "vehicle_battery_supply"
+    ],
+    "evidence_count": 27
+  },
+  "persistence_meta": {}
+}

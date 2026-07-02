@@ -60,7 +60,38 @@ def graph_visualization(trace_id: str = "", project_id: str = "") -> dict[str, A
 
 
 def _unwrap_payload(request: dict[str, Any], key: str) -> dict[str, Any]:
-    payload = request.get(key, request)
+    payload = _find_payload(request, key) or request
     if not isinstance(payload, dict):
         return {}
     return payload
+
+
+def _find_payload(value: Any, key: str) -> dict[str, Any] | None:
+    if isinstance(value, list):
+        for item in value:
+            found = _find_payload(item, key)
+            if found is not None:
+                return found
+        return None
+
+    if not isinstance(value, dict):
+        return None
+
+    if isinstance(value.get(key), dict):
+        return value[key]
+
+    # Main Insight backend shapes:
+    # - /report/ returns {"insight_payload": {...}}
+    # - websocket completion sends {"type": "path", "output": {"insight_payload": {...}}}
+    # - report history may wrap payload under {"report": {...}}
+    for wrapper_key in ("output", "report", "data", "result"):
+        nested = value.get(wrapper_key)
+        found = _find_payload(nested, key)
+        if found is not None:
+            return found
+
+    found = _find_payload(value.get("orderedData"), key)
+    if found is not None:
+        return found
+
+    return None

@@ -27,6 +27,67 @@ def test_build_graph_api_returns_graph_payload():
     assert payload["evidence_chunks"]
 
 
+def test_build_graph_api_accepts_main_backend_report_response():
+    response = client.post(
+        "/api/graph/build",
+        json={
+            "research_id": "task_demo",
+            "report": "demo report",
+            "insight_payload": sample_insight_payload(),
+            "insight_json_path": "outputs/task_demo.insight.json",
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["task_profile"]["industry"] == "新能源"
+    assert payload["company_edges"]
+
+
+def test_build_graph_api_accepts_websocket_path_message():
+    response = client.post(
+        "/api/graph/build",
+        json={
+            "type": "path",
+            "output": {
+                "pdf": "outputs/task_demo.pdf",
+                "insight_payload": sample_insight_payload(),
+            },
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["task_profile"]["industry"] == "新能源"
+    assert payload["profile_edges"]
+
+
+def test_build_graph_api_accepts_report_history_response():
+    response = client.post(
+        "/api/graph/build",
+        json={
+            "report": {
+                "id": "task_demo",
+                "orderedData": [
+                    {"type": "question", "content": "新能源汽车"},
+                    {
+                        "type": "path",
+                        "output": {
+                            "insight_json": "outputs/task_demo.insight.json",
+                            "insight_payload": sample_insight_payload(),
+                        },
+                    },
+                ],
+            },
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["task_profile"]["industry"] == "新能源"
+    assert payload["company_edges"]
+
+
 def test_build_and_persist_fails_without_neo4j_uri(monkeypatch):
     monkeypatch.delenv("NEO4J_URI", raising=False)
     monkeypatch.delenv("KG_ALLOW_GRAPH_PAYLOAD_FALLBACK", raising=False)
